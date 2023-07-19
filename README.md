@@ -1,3 +1,3 @@
 # Vidura Sense
 
-Collect web info based on interest
+Intent based web crawler.
