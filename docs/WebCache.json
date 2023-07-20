@@ -1,26 +1,39 @@
 {
-    "id":"hashurl",
-    "url":"google.com",
-    "protocol":"https",
-    "raw_body":"Hello Crawler",
-    "meta_info":"",
-    "links":[
+    "id": "hashurl",
+    "url": "google.com",
+    "protocol": "https",
+    "title":"Site Title",
+    "meta": {
+        "charset": "utf-8",
+        "author":"bikash",
+        "description":"description",
+        "language":"en_IN",
+        "viewport":"width=device-width, initial-scale=1"
+    },
+    "text_blocks":[
         {
-            "title":"Link1",
-            "url":"http://url1"
-        },
-        {
-            "title":"Link1",
-            "url":"http://url1"
-        },
-        {
-            "title":"Link1",
-            "url":"http://url1"
+            "heading":"Header1",
+            "content":"Header1"
         }
     ],
-    "last_updated":"2023-07-17T10:00:00",
-    "updated_by":{
-        "agent":"bot1",
-        "proxy":""
+    "links": [
+        {
+            "title": "Link1",
+            "url": "http://url1"
+        },
+        {
+            "title": "Link1",
+            "url": "http://url1"
+        },
+        {
+            "title": "Link1",
+            "url": "http://url1"
+        }
+    ],
+    "updated_on": "2023-07-17T10:00:00",
+    "updated_by": {
+        "agent": "bot1",
+        "proxy": "",
+        "node_ip":""
     }
 }

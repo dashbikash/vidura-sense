@@ -20,6 +20,7 @@ type Crawler interface {
 	OnSuccess(func(*http.Response))
 	OnError(func(*http.Response))
 	OnHtml(func(*goquery.Document))
+	OnXml(func(*goquery.Document))
 }
 
 type BasicCrawler struct {
@@ -28,6 +29,7 @@ type BasicCrawler struct {
 	handlerOnsuccess func(*http.Response)
 	handlerOnError   func(*http.Response)
 	handlerOnHtml    func(*goquery.Document)
+	handlerOnXml     func(*goquery.Document)
 }
 
 func (cl *BasicCrawler) Run(targetUrl string) {
@@ -53,6 +55,14 @@ func (cl *BasicCrawler) Run(targetUrl string) {
 			}
 			cl.handlerOnHtml(doc)
 		}
+		if _, ok := strings.CutPrefix(res.Header.Get("Content-Type"), "text/xml"); ok {
+			// Load the HTML document
+			doc, err := goquery.NewDocumentFromReader(res.Body)
+			if err != nil {
+				log.Fatal(err.Error())
+			}
+			cl.handlerOnXml(doc)
+		}
 
 	} else {
 		cl.handlerOnError(res)
@@ -67,6 +77,9 @@ func (cl *BasicCrawler) OnError(fn func(*http.Response)) {
 }
 func (cl *BasicCrawler) OnHtml(fn func(*goquery.Document)) {
 	cl.handlerOnHtml = fn
+}
+func (cl *BasicCrawler) OnXml(fn func(*goquery.Document)) {
+	cl.handlerOnXml = fn
 }
 
 func New() Crawler {

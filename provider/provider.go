@@ -3,28 +3,44 @@ package provider
 import (
 	"os"
 
-	"go.uber.org/zap"
+	"github.com/sirupsen/logrus"
 	"gopkg.in/yaml.v3"
 )
 
-func GetLogger() *zap.Logger {
-	logger, _ := zap.NewDevelopment()
-	defer logger.Sync()
-	return logger
+var config = GetConfig()
+
+func GetLogger() *logrus.Logger {
+	log := logrus.New()
+	log.Out = os.Stdout
+	if config.Application.Log.Output == "file" {
+		logFile := config.Application.Log.Dir + "/" + "app.log"
+		file, err := os.OpenFile(logFile, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
+		if err == nil {
+			log.Error("Failed to log to file, using default stdout")
+		} else {
+			log.Out = file
+		}
+	}
+	log.Level = logrus.DebugLevel
+	return log
 }
+func GetConfig() *Config {
+	configFile := "config.yml"
+	if len(os.Args) > 1 {
+		configFile = os.Args[1]
+	}
 
-func GetConfig() Config {
-	ymlText, err := ReadTextFile("config.yml")
+	ymlText, err := ReadTextFile(configFile)
+	if err != nil {
+		panic("Failed to read configuration file")
+	}
+	cf := &Config{}
+	err = yaml.Unmarshal([]byte(ymlText), &cf)
 	if err != nil {
 		panic(err)
 	}
-	config := Config{}
-	err = yaml.Unmarshal([]byte(ymlText), &config)
-	if err != nil {
-		panic(err)
-	}
 
-	return config
+	return cf
 }
 
 func ReadTextFile(filePath string) (string, error) {
@@ -39,6 +55,11 @@ type Config struct {
 	Application struct {
 		Name    string
 		Version string
+		Log     struct {
+			Level  string
+			Output string
+			Dir    string
+		}
 	}
 	Server struct {
 		Mode string
@@ -47,7 +68,10 @@ type Config struct {
 	}
 
 	Crawler struct {
-		UserAgent string
+		UserAgent string `yaml:"user-agent"`
 		Proxies   []string
+	}
+	Data struct {
+		MongoUrl string `yaml:"mongo-url"`
 	}
 }

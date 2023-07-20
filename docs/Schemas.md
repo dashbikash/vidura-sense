@@ -8,7 +8,7 @@
     "url":"google.com",
     "protocol":"https",
     "raw_body":"Hello Crawler",
-    "meta_info":"",
+    "metas":"",
     "links":[
         {
             "title":"Link1",

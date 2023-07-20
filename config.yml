@@ -1,13 +1,20 @@
 application:
   name: Vidura Sense
   version: 0.1-dev
+  log:
+    level: debug
+    output: stdout
+    dir: 
+
 server:
   mode: debug
   host: localhost
   port: 8600
 crawler: 
-  user_agent: EthicalBot/0.1-dev/Email:bikashprakashdash@gmail.com
+  user-agent: EthicalBot/0.1-dev/Email:bikashprakashdash@gmail.com
   proxies: 
     - http://test:test@localhost:3128
     - http://test:test@localhost:3129
     - http://test:test@localhost:3130
+data:
+  mongo-url: mongodb://root:root@localhost:27017/?authSource=admin

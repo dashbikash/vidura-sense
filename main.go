@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/common-nighthawk/go-figure"
+	_ "github.com/dashbikash/vidura-sense/datastore/mongo"
 	"github.com/dashbikash/vidura-sense/provider"
 	"github.com/dashbikash/vidura-sense/requestor"
 	_ "github.com/dashbikash/vidura-sense/restapi"
@@ -17,9 +18,11 @@ func main() {
 	greet()
 	//scheduler.Start()
 	//restapi.Start()
-	requestor.Request()
+	requestor.RequestDemo()
+	//mongo.QueryData()
 }
 func greet() {
-	figure.NewFigure(config.Application.Name, "", true).Print()
-	fmt.Println(strings.Repeat(" = ", 23) + "Version " + config.Application.Version + "\n")
+	figure.NewFigure("Vidura Sense", "", true).Print()
+	fmt.Println(strings.Repeat("= ", 42) + config.Application.Version + "\n")
+
 }

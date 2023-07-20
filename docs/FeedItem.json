@@ -1,0 +1,13 @@
+{
+    "url":"url",
+    "source_url":"url",
+    "title":"title",
+    "description":"description",
+    "published_on":"2023-07-17T10:00:00",
+    "updated_on": "2023-07-17T10:00:00",
+    "updated_by": {
+        "agent": "bot1",
+        "proxy": "",
+        "node_ip":""
+    }
+}
