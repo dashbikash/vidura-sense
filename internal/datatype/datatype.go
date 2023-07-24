@@ -2,7 +2,7 @@ package datatype
 
 import "time"
 
-type HtmlDocument struct {
+type HtmlRaw struct {
 	ID       string `json:"id"`
 	URL      string `json:"url"`
 	Protocol string `json:"protocol"`
@@ -14,10 +14,7 @@ type HtmlDocument struct {
 		Language    string `json:"language"`
 		Viewport    string `json:"viewport"`
 	} `json:"meta"`
-	TextBlocks []struct {
-		Heading string `json:"heading"`
-		Content string `json:"content"`
-	} `json:"text_blocks"`
+	Body  string `json:"body"`
 	Links []struct {
 		Title string `json:"title"`
 		URL   string `json:"url"`

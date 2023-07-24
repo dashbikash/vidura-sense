@@ -7,3 +7,4 @@ go get github.com/sirupsen/logrus
 go get go.mongodb.org/mongo-driver/mongo
 go get github.com/mmcdole/gofeed
 go get github.com/robertkrimen/otto
+go get go get github.com/redis/go-redis/v9

@@ -7,12 +7,12 @@ import (
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
-	"github.com/dashbikash/vidura-sense/provider"
+	"github.com/dashbikash/vidura-sense/internal/common"
 )
 
 var (
-	log    = provider.GetLogger()
-	config = provider.GetConfig()
+	log    = common.GetLogger()
+	config = common.GetConfig()
 )
 
 type Crawler interface {

@@ -17,4 +17,14 @@ crawler:
     - http://test:test@localhost:3129
     - http://test:test@localhost:3130
 data:
-  mongo-url: mongodb://root:root@localhost:27017/?authSource=admin
+  mongo:
+    mongo-url: mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+    collections: 
+      htmlpages: htmlpages
+      feeditems: feeditems
+  redis:
+    redis-url: redis://localhost:6379/0
+    branches:
+      robots-txt: 
+        name: robots-txt
+        ttl: 1 #In hours

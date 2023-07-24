@@ -1,4 +1,4 @@
-package provider
+package common
 
 import (
 	"os"
@@ -25,7 +25,7 @@ func GetLogger() *logrus.Logger {
 	return log
 }
 func GetConfig() *Config {
-	configFile := "config.yml"
+	configFile := "config/config.yml"
 	if len(os.Args) > 1 {
 		configFile = os.Args[1]
 	}
@@ -72,6 +72,21 @@ type Config struct {
 		Proxies   []string
 	}
 	Data struct {
-		MongoUrl string `yaml:"mongo-url"`
+		Mongo struct {
+			MongoUrl    string `yaml:"mongo-url"`
+			Collections struct {
+				Htmlpages string `yaml:"htmlpages"`
+				Feeditems string `yaml:"feeditems"`
+			}
+		}
+		Redis struct {
+			RedisUrl string `yaml:"redis-url"`
+			Branches struct {
+				RobotsTxt struct {
+					Name string
+					Ttl  int
+				} `yaml:"robots-txt"`
+			}
+		}
 	}
 }

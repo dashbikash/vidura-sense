@@ -1,8 +1,8 @@
 # Web Crawler Schemas
 
-## 1.0 WebCache
+## 1.0 HtmlContent
 
-``` Json
+```json
 {
     "id":"hashurl",
     "url":"google.com",

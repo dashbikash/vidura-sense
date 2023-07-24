@@ -1,24 +1,24 @@
-package mongo
+package mongostore
 
 import (
 	"context"
 	"encoding/json"
 	"fmt"
 
-	"github.com/dashbikash/vidura-sense/provider"
+	"github.com/dashbikash/vidura-sense/internal/common"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var (
-	log    = provider.GetLogger()
-	config = provider.GetConfig()
+	log    = common.GetLogger()
+	config = common.GetConfig()
 )
 
 func getConnection() *mongo.Client {
-	log.Debugf("Connecting to Mongodb %s", config.Data.MongoUrl)
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Data.MongoUrl))
+	log.Debugf("Connecting to Mongodb %s", config.Data.Mongo.MongoUrl)
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Data.Mongo.MongoUrl))
 	if err != nil {
 		panic(err)
 	}
@@ -32,8 +32,8 @@ func getConnection() *mongo.Client {
 }
 
 func QueryData() {
-	log.Debugf("Connecting to Mongodb %s", config.Data.MongoUrl)
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Data.MongoUrl))
+	log.Debugf("Connecting to Mongodb %s", config.Data.Mongo.MongoUrl)
+	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Data.Mongo.MongoUrl))
 	if err != nil {
 		panic(err)
 	}

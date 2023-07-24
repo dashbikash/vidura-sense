@@ -5,21 +5,20 @@ import (
 	"strings"
 
 	"github.com/common-nighthawk/go-figure"
-	_ "github.com/dashbikash/vidura-sense/datastore/mongo"
-	"github.com/dashbikash/vidura-sense/provider"
-	"github.com/dashbikash/vidura-sense/requestor"
-	_ "github.com/dashbikash/vidura-sense/restapi"
-	_ "github.com/dashbikash/vidura-sense/scheduler"
+	"github.com/dashbikash/vidura-sense/internal/common"
+	"github.com/dashbikash/vidura-sense/internal/requestor"
 )
 
-var config = provider.GetConfig()
+var config = common.GetConfig()
 
 func main() {
 	greet()
 	//scheduler.Start()
 	//restapi.Start()
-	requestor.RequestDemo()
+	//requestor.RequestDemo()
 	//mongo.QueryData()
+	requestor.GetRobots()
+
 }
 func greet() {
 	figure.NewFigure("Vidura Sense", "", true).Print()

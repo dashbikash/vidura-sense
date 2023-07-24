@@ -36,7 +36,7 @@ This contains the apis to feed urls for every trigger.
 This contains the apis to process data.
 
 - Get content form [Requestor](#21-requester).
-- Process it to schema refer to [HtmlContent](./Schemas.md#10-webcache)
+- Process it to schema refer to [WebCache](./Schemas.md#10-webcache)
 - Filter content using Intelligence provider APIs.
 - After processing send it to Storage Provider
 
@@ -48,7 +48,7 @@ This module contains apis to store data in databases or other storage.
 
 ### 2.5 Scheduler
 
-This module triggers [Requester](#21-requester) on regular intervals.
+This module triggers [Requestor](#21-requester) on regular intervals.
 
 ### 2.6 REST Apis
 
