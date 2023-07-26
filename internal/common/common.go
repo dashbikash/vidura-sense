@@ -3,26 +3,29 @@ package common
 import (
 	"os"
 
-	"github.com/sirupsen/logrus"
+	"go.uber.org/zap"
+	"go.uber.org/zap/zapcore"
 	"gopkg.in/yaml.v3"
 )
 
 var config = GetConfig()
 
-func GetLogger() *logrus.Logger {
-	log := logrus.New()
-	log.Out = os.Stdout
-	if config.Application.Log.Output == "file" {
-		logFile := config.Application.Log.Dir + "/" + "app.log"
-		file, err := os.OpenFile(logFile, os.O_CREATE|os.O_WRONLY|os.O_APPEND, 0666)
-		if err == nil {
-			log.Error("Failed to log to file, using default stdout")
-		} else {
-			log.Out = file
-		}
+func GetLogger() *zap.Logger {
+
+	cfg := zap.NewDevelopmentConfig()
+	cfg.OutputPaths = config.Application.Log.Outputs
+	cfg.Level = config.Application.Log.Level
+
+	cfg.EncoderConfig.EncodeCaller = zapcore.FullCallerEncoder
+	cfg.EncoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
+	logger, err := cfg.Build()
+
+	if err != nil {
+		panic(err)
 	}
-	log.Level = logrus.DebugLevel
-	return log
+	defer logger.Sync()
+
+	return logger
 }
 func GetConfig() *Config {
 	configFile := "config/config.yml"
@@ -56,9 +59,8 @@ type Config struct {
 		Name    string
 		Version string
 		Log     struct {
-			Level  string
-			Output string
-			Dir    string
+			Level   zap.AtomicLevel
+			Outputs []string
 		}
 	}
 	Server struct {
@@ -74,6 +76,7 @@ type Config struct {
 	Data struct {
 		Mongo struct {
 			MongoUrl    string `yaml:"mongo-url"`
+			Database    string
 			Collections struct {
 				Htmlpages string `yaml:"htmlpages"`
 				Feeditems string `yaml:"feeditems"`

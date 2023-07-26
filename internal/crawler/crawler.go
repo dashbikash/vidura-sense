@@ -8,6 +8,7 @@ import (
 
 	"github.com/PuerkitoBio/goquery"
 	"github.com/dashbikash/vidura-sense/internal/common"
+	robotstxtutil "github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util"
 )
 
 var (
@@ -16,7 +17,7 @@ var (
 )
 
 type Crawler interface {
-	Run(targetUrl string)
+	Run(targetUrl string, checkRobot bool)
 	OnSuccess(func(*http.Response))
 	OnError(func(*http.Response))
 	OnHtml(func(*goquery.Document))
@@ -26,13 +27,20 @@ type Crawler interface {
 type BasicCrawler struct {
 	Crawler
 	client           *http.Client
-	handlerOnsuccess func(*http.Response)
+	handlerOnSuccess func(*http.Response)
 	handlerOnError   func(*http.Response)
 	handlerOnHtml    func(*goquery.Document)
 	handlerOnXml     func(*goquery.Document)
 }
 
-func (cl *BasicCrawler) Run(targetUrl string) {
+func (cl *BasicCrawler) Run(targetUrl string, checkRobot bool) {
+	if checkRobot {
+		if allowed := robotstxtutil.IsAllowedUrl(targetUrl); !allowed {
+			cl.handlerOnError(&http.Response{StatusCode: 403, Status: "403 Forbidden"})
+			return
+		}
+	}
+
 	req, err := http.NewRequest("GET", targetUrl, nil)
 	if err != nil {
 		log.Error(err.Error())
@@ -43,34 +51,45 @@ func (cl *BasicCrawler) Run(targetUrl string) {
 	if err != nil {
 		log.Error(err.Error())
 	}
-	defer res.Body.Close()
-	if res.StatusCode == 200 {
-		cl.handlerOnsuccess(res)
 
-		if _, ok := strings.CutPrefix(res.Header.Get("Content-Type"), "text/html"); ok {
-			// Load the HTML document
-			doc, err := goquery.NewDocumentFromReader(res.Body)
-			if err != nil {
-				log.Fatal(err.Error())
-			}
-			cl.handlerOnHtml(doc)
+	if res.StatusCode == 200 {
+		if cl.handlerOnSuccess != nil {
+			cl.handlerOnSuccess(res)
 		}
-		if _, ok := strings.CutPrefix(res.Header.Get("Content-Type"), "text/xml"); ok {
+
+		if ok := strings.HasPrefix(res.Header.Get("Content-Type"), "text/html"); ok {
 			// Load the HTML document
 			doc, err := goquery.NewDocumentFromReader(res.Body)
 			if err != nil {
 				log.Fatal(err.Error())
 			}
-			cl.handlerOnXml(doc)
+			doc.Url = res.Request.URL
+			if cl.handlerOnHtml != nil {
+				cl.handlerOnHtml(doc)
+			}
+
+		} else if ok := strings.HasPrefix(res.Header.Get("Content-Type"), "text/xml"); ok {
+			// Load the HTML document
+			doc, err := goquery.NewDocumentFromReader(res.Body)
+			if err != nil {
+				log.Fatal(err.Error())
+			}
+			if cl.handlerOnXml != nil {
+				cl.handlerOnXml(doc)
+			}
+
 		}
 
 	} else {
-		cl.handlerOnError(res)
+		if cl.handlerOnError != nil {
+			cl.handlerOnError(res)
+		}
+
 	}
 
 }
 func (cl *BasicCrawler) OnSuccess(fn func(*http.Response)) {
-	cl.handlerOnsuccess = fn
+	cl.handlerOnSuccess = fn
 }
 func (cl *BasicCrawler) OnError(fn func(*http.Response)) {
 	cl.handlerOnError = fn

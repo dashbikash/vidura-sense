@@ -2,12 +2,12 @@ package datatype
 
 import "time"
 
-type HtmlRaw struct {
-	ID       string `json:"id"`
-	URL      string `json:"url"`
-	Protocol string `json:"protocol"`
-	Title    string `json:"title"`
-	Meta     struct {
+type HtmlPage struct {
+	ID     string `json:"id"`
+	URL    string `json:"url"`
+	Scheme string `json:"scheme"`
+	Title  string `json:"title"`
+	Meta   struct {
 		Charset     string `json:"charset"`
 		Author      string `json:"author"`
 		Description string `json:"description"`

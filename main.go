@@ -17,11 +17,10 @@ func main() {
 	//restapi.Start()
 	//requestor.RequestDemo()
 	//mongo.QueryData()
-	requestor.GetRobots()
 
+	requestor.RequestDemo()
 }
 func greet() {
 	figure.NewFigure("Vidura Sense", "", true).Print()
 	fmt.Println(strings.Repeat("= ", 42) + config.Application.Version + "\n")
-
 }

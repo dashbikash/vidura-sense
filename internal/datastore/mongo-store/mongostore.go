@@ -14,38 +14,57 @@ import (
 var (
 	log    = common.GetLogger()
 	config = common.GetConfig()
+	ctx    = context.Background()
 )
 
-func getConnection() *mongo.Client {
-	log.Debugf("Connecting to Mongodb %s", config.Data.Mongo.MongoUrl)
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Data.Mongo.MongoUrl))
-	if err != nil {
-		panic(err)
-	}
-	defer func() {
-		if err := client.Disconnect(context.TODO()); err != nil {
-			panic(err)
-		}
-	}()
-
-	return client
+type MongoStore struct {
+	mongoClient *mongo.Client
 }
 
+func DefaultClient() *MongoStore {
+	log.Debug("Connecting to Mongodb " + config.Data.Mongo.MongoUrl)
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI(config.Data.Mongo.MongoUrl))
+	if err != nil {
+		log.Error(err.Error())
+		return nil
+	}
+
+	return &MongoStore{mongoClient: client}
+}
+
+func (ds *MongoStore) CreateOrReplaceOne(collection string, data interface{}, filter interface{}) int64 {
+	defer ds.dispose()
+	opts := options.Replace().SetUpsert(true)
+	result, err := ds.mongoClient.Database(config.Data.Mongo.Database).Collection(collection).ReplaceOne(ctx, filter, data, opts)
+	if err != nil {
+		log.Error(err.Error())
+		return 0
+	}
+
+	return result.MatchedCount
+}
+func (ds *MongoStore) dispose() {
+
+	if err := ds.mongoClient.Disconnect(ctx); err != nil {
+		log.Error(err.Error())
+	}
+
+}
 func QueryData() {
-	log.Debugf("Connecting to Mongodb %s", config.Data.Mongo.MongoUrl)
-	client, err := mongo.Connect(context.TODO(), options.Client().ApplyURI(config.Data.Mongo.MongoUrl))
+	log.Debug("Connecting to Mongodb " + config.Data.Mongo.MongoUrl)
+	client, err := mongo.Connect(ctx, options.Client().ApplyURI(config.Data.Mongo.MongoUrl))
 	if err != nil {
 		panic(err)
 	}
 	defer func() {
-		if err := client.Disconnect(context.TODO()); err != nil {
+		if err := client.Disconnect(ctx); err != nil {
 			panic(err)
 		}
 	}()
 	coll := client.Database("sample").Collection("employees")
 
 	var result bson.M
-	err = coll.FindOne(context.TODO(), bson.D{{"lname", "Carter"}}).Decode(&result)
+	err = coll.FindOne(ctx, bson.D{{"lname", "Carter"}}).Decode(&result)
 	if err == mongo.ErrNoDocuments {
 		fmt.Printf("No document was found")
 		return

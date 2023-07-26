@@ -14,27 +14,35 @@ var (
 	ctx    = context.Background()
 )
 
-func getClient() *redis.Client {
+type RedisStore struct {
+	redisClient *redis.Client
+}
+
+func DefaultClient() *RedisStore {
+
 	opt, err := redis.ParseURL(config.Data.Redis.RedisUrl)
 	if err != nil {
 		panic(err)
 	}
-	return redis.NewClient(opt)
+	return &RedisStore{redisClient: redis.NewClient(opt)}
 }
-func GetRobotsTxt(domainName string) {
-	rdb := getClient()
-	result, err := rdb.Get(ctx, config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName).Result()
+
+func (rds *RedisStore) GetString(key string, defaultVal string) string {
+
+	result, err := rds.redisClient.Get(ctx, key).Result()
 	if err != nil {
-		panic(err.Error())
+		log.Error(err.Error())
+		return defaultVal
 	}
-	rdb.Close()
-	log.Println(result)
+	rds.redisClient.Close()
+	return result
 }
-func SetRobotsTxt(domainName string, robotsTxt string) {
-	rdb := getClient()
-	result, err := rdb.Set(ctx, config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, robotsTxt, time.Hour*time.Duration(config.Data.Redis.Branches.RobotsTxt.Ttl)).Result()
+func (rds *RedisStore) SetString(key string, val string, ttl time.Duration) bool {
+	log.Debug("Adding key to" + key)
+	result, err := rds.redisClient.Set(ctx, key, val, time.Duration(ttl)).Result()
 	if err != nil {
-		panic(err.Error())
+		log.Error(err.Error())
 	}
-	log.Println(result)
+	rds.redisClient.Close()
+	return result == "OK"
 }

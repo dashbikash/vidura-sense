@@ -3,8 +3,9 @@ application:
   version: 0.1-dev
   log:
     level: debug
-    output: stdout
-    dir: 
+    outputs: 
+      - stdout
+      - logs/app.log
 
 server:
   mode: debug
@@ -19,6 +20,7 @@ crawler:
 data:
   mongo:
     mongo-url: mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+    database: vidura-iras
     collections: 
       htmlpages: htmlpages
       feeditems: feeditems
