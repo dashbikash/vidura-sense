@@ -1,13 +1,13 @@
 package restapi
 
 import (
-	"github.com/dashbikash/vidura-sense/internal/common"
 	"github.com/dashbikash/vidura-sense/internal/restapi/handlers"
+	"github.com/dashbikash/vidura-sense/internal/system"
 	"github.com/gin-gonic/gin"
 )
 
 var (
-	config = common.GetConfig()
+	config = system.GetConfig()
 	router = gin.Default()
 )
 

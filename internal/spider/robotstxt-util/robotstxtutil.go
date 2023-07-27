@@ -1,20 +1,20 @@
 package robotstxtutil
 
 import (
-	"io/ioutil"
+	"io"
 	"net/http"
 	"net/url"
 	"strings"
 	"time"
 
-	"github.com/dashbikash/vidura-sense/internal/common"
 	redisstore "github.com/dashbikash/vidura-sense/internal/datastore/redis-store"
+	"github.com/dashbikash/vidura-sense/internal/system"
 	"github.com/temoto/robotstxt"
 )
 
 var (
-	config = common.GetConfig()
-	log    = common.GetLogger()
+	log    = system.GetLogger()
+	config = system.GetConfig()
 )
 
 func getRobotsTxtCache(domainName string) string {
@@ -39,7 +39,7 @@ func fetchRobotsTxtFromServer(hostUrl string) string {
 	if err != nil {
 		log.Error(err.Error())
 	}
-	body, err := ioutil.ReadAll(resp.Body)
+	body, err := io.ReadAll(resp.Body)
 	if err != nil {
 		log.Error(err.Error())
 	}
@@ -55,7 +55,7 @@ func fetchRobotsTxtFromServer(hostUrl string) string {
 func GetRobotsTxtForUrl(targetUrl string) string {
 	robotsTxt := ""
 	urlParsed, err := url.Parse(targetUrl)
-	log.Debug("Getting Robotstxt for+" + urlParsed.Host)
+	log.Debug("Getting Robotstxt: " + urlParsed.Host)
 	if err != nil {
 		log.Error(err.Error())
 	} else {

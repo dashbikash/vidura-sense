@@ -1,4 +1,4 @@
-package common
+package system
 
 import (
 	"os"
@@ -16,7 +16,7 @@ func GetLogger() *zap.Logger {
 	cfg.OutputPaths = config.Application.Log.Outputs
 	cfg.Level = config.Application.Log.Level
 
-	cfg.EncoderConfig.EncodeCaller = zapcore.FullCallerEncoder
+	cfg.EncoderConfig.EncodeCaller = zapcore.ShortCallerEncoder
 	cfg.EncoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
 	logger, err := cfg.Build()
 

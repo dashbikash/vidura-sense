@@ -5,15 +5,15 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/dashbikash/vidura-sense/internal/common"
+	"github.com/dashbikash/vidura-sense/internal/system"
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/mongo"
 	"go.mongodb.org/mongo-driver/mongo/options"
 )
 
 var (
-	log    = common.GetLogger()
-	config = common.GetConfig()
+	log    = system.GetLogger()
+	config = system.GetConfig()
 	ctx    = context.Background()
 )
 

@@ -1,7 +1,8 @@
 {
     "id": "hashurl",
-    "url": "google.com",
-    "protocol": "https",
+    "url": "google.com/search/about",
+    "scheme": "https",
+    "host":"google.com",
     "title":"Site Title",
     "meta": {
         "charset": "utf-8",
@@ -10,12 +11,7 @@
         "language":"en_IN",
         "viewport":"width=device-width, initial-scale=1"
     },
-    "text_blocks":[
-        {
-            "heading":"Header1",
-            "content":"Header1"
-        }
-    ],
+    "body":"body content",
     "links": [
         {
             "title": "Link1",
@@ -32,7 +28,6 @@
     ],
     "updated_on": "2023-07-17T10:00:00",
     "updated_by": {
-        "agent": "bot1",
         "proxy": "",
         "node_ip":""
     }

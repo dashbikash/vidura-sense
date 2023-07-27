@@ -1,698 +1,91 @@
-2023-07-26T02:02:00.075+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T02:02:00.076+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32	dial tcp: address redis://default:pasword@localhost:6379/0: too many colons in address
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T02:02:00.639+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:39	Adding key torobots-txt:github.com
-2023-07-26T02:02:00.639+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42	dial tcp: address redis://default:pasword@localhost:6379/0: too many colons in address
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).SetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.setRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:25
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:67
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T02:02:00.640+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T02:02:01.264+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T02:02:01.390+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T02:03:03.275+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T02:03:03.291+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32	ERR This instance has cluster support disabled
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T02:03:03.883+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:39	Adding key torobots-txt:github.com
-2023-07-26T02:03:03.887+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42	ERR This instance has cluster support disabled
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).SetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.setRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:25
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:67
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T02:03:03.888+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T02:03:04.528+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T02:03:04.672+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T02:59:46.694+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T02:59:46.697+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32	dial tcp: address redis://localhost:6379: too many colons in address
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T02:59:47.245+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:39	Adding key torobots-txt:github.com
-2023-07-26T02:59:47.245+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42	dial tcp: address redis://localhost:6379: too many colons in address
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).SetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.setRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:25
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:67
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T02:59:47.246+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T02:59:47.785+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T02:59:47.906+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T03:00:17.923+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T03:00:17.941+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32	ERR This instance has cluster support disabled
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T03:00:18.495+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:39	Adding key torobots-txt:github.com
-2023-07-26T03:00:18.504+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42	ERR This instance has cluster support disabled
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).SetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.setRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:25
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:67
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T03:00:18.505+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T03:00:19.074+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T03:00:19.194+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T03:23:58.133+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T03:23:58.135+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32	dial tcp [::1]:6379: connect: connection refused
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T03:23:58.683+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:39	Adding key torobots-txt:github.com
-2023-07-26T03:23:58.685+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42	dial tcp [::1]:6379: connect: connection refused
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).SetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.setRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:25
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:67
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T03:23:58.687+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T03:23:59.296+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T03:23:59.401+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T03:30:49.880+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T03:30:49.886+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32	dial tcp [::1]:6379: connect: connection refused
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:32
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T03:30:50.477+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:39	Adding key torobots-txt:github.com
-2023-07-26T03:30:50.482+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42	dial tcp [::1]:6379: connect: connection refused
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).SetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:42
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.setRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:25
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:67
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T03:30:50.486+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T03:30:51.008+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T03:30:51.133+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T13:05:15.136+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T13:05:15.198+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
+2023-07-28T02:51:35.523+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T02:51:35.524+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T02:51:35.525+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T02:51:35.526+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T02:51:35.527+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T02:51:35.523+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T02:51:35.536+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T02:51:35.539+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T02:51:35.969+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T02:51:35.971+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T02:51:36.030+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:36.035+0530	INFO	requestor/requestor.go:94	Processing Html for https://kubernetes.io/
+2023-07-28T02:51:36.036+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:36.075+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:36.208+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T02:51:36.210+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T02:51:36.225+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T02:51:36.228+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T02:51:36.248+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T02:51:36.251+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T02:51:36.608+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:36.608+0530	INFO	requestor/requestor.go:94	Processing Html for https://www.packtpub.com
+2023-07-28T02:51:36.609+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:36.648+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:37.158+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:37.158+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T02:51:37.160+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:37.199+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:37.464+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:37.466+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T02:51:37.468+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:37.469+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com
+2023-07-28T02:51:37.471+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:37.485+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:37.525+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:37.548+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:38.081+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:38.135+0530	INFO	requestor/requestor.go:94	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T02:51:38.139+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:38.221+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:56.790+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T02:51:56.791+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T02:51:56.792+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T02:51:56.793+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T02:51:56.793+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T02:51:56.794+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T02:51:56.794+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T02:51:56.804+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T02:51:56.810+0530	ERROR	redis-store/redisstore.go:34	redis: nil
 github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
 	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-26T13:05:19.142+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:github.com
-2023-07-26T13:05:19.149+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T13:05:21.834+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T13:05:23.785+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-26T13:05:34.812+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-26T13:05:34.814+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-26T13:05:38.211+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:18	200 OK
-2023-07-26T13:05:40.687+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:25	GitHub - Robpol86/logrus-custom-formatter: Customizable Logrus formatter similar in style to Python's logging.Formatter.
-2023-07-27T02:08:43.161+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-27T02:08:43.206+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:39
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:08:47.783+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:github.com
-2023-07-27T02:08:47.824+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-27T02:08:49.834+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:10:00.341+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-27T02:10:00.344+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-27T02:10:05.830+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:11:20.195+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+github.com
-2023-07-27T02:11:24.593+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:github.com
-2023-07-27T02:11:28.712+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:12:38.309+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:12:38.316+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:39
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:12:41.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:12:45.925+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:15:58.126+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:15:58.130+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:39
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:16:15.845+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:16:23.435+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:16:43.581+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:16:43.584+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:39
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:16:45.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:16:51.304+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:17:52.072+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:17:52.075+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:39
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:17:53.855+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:18:24.232+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:21:25.166+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:21:25.170+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:39
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:21:27.845+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:21:31.846+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:22:45.005+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:22:45.008+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:22:47.685+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:23:01.934+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:23:48.737+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:23:48.740+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:23:50.128+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:23:57.836+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:26:35.325+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:26:35.364+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:26:37.830+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:26:40.904+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:28:59.494+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:28:59.500+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:29:00.502+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:29:03.722+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:31:26.349+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:31:26.352+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:31:29.830+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:31:31.846+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:32:02.481+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:32:02.525+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:32:05.296+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:32:07.558+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:35:56.548+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:35:56.590+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:35:58.986+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:36:05.225+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:36:05.829+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing for quotes.toscrape.com
-2023-07-27T02:36:05.832+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:36:05.834+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:45	client is disconnected
-github.com/dashbikash/vidura-sense/internal/datastore/mongo-store.(*MongoStore).CreateOrReplaceOne
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:45
-github.com/dashbikash/vidura-sense/internal/dataprocessor.StoreHtml
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:23
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo.func3
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:31
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:68
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:37
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:36:05.834+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document inserted.
-2023-07-27T02:38:10.488+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:38:10.526+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:77
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:38
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:38:13.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:84	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:38:16.362+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:38:22.660+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing for https://quotes.toscrape.com/
-2023-07-27T02:39:11.096+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:43:34.212+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:43:34.213+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34	redis: nil
-github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.getRobotsTxtCache
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:22
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.GetRobotsTxtForUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:63
-github.com/dashbikash/vidura-sense/internal/crawler/robotstxt-util.IsAllowedUrl
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:75
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:38
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:38
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:43:39.814+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:43:39.854+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:43:41.868+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:43:43.046+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:43:43.053+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:43:43.324+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:45	write exception: write errors: [unknown top level operator: $eq]
-github.com/dashbikash/vidura-sense/internal/datastore/mongo-store.(*MongoStore).CreateOrReplaceOne
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:45
-github.com/dashbikash/vidura-sense/internal/dataprocessor.StoreHtml
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:23
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo.func3
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:68
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:38
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:43:43.325+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document inserted.
-2023-07-27T02:45:35.928+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:45:37.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:45:37.831+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:45:41.831+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:45:43.923+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:45:43.927+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:45:43.997+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:41	write exception: write errors: [unknown top level operator: $eq]
-github.com/dashbikash/vidura-sense/internal/datastore/mongo-store.(*MongoStore).CreateOrReplaceOne
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:41
-github.com/dashbikash/vidura-sense/internal/dataprocessor.StoreHtml
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:23
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo.func3
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:68
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:38
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:45:43.997+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document inserted.
-2023-07-27T02:45:59.973+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:46:04.086+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:46:04.090+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:46:07.846+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:46:19.984+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:46:26.472+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:51:25.427+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:51:27.813+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:51:27.815+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:51:30.725+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:51:31.845+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:51:31.848+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:51:31.886+0530	ERROR	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:41	write exception: write errors: [unknown top level operator: $eq]
-github.com/dashbikash/vidura-sense/internal/datastore/mongo-store.(*MongoStore).CreateOrReplaceOne
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:41
-github.com/dashbikash/vidura-sense/internal/dataprocessor.StoreHtml
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:23
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo.func3
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:32
-github.com/dashbikash/vidura-sense/internal/crawler.(*BasicCrawler).Run
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/crawler.go:68
-github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo
-	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:38
-main.main
-	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:21
-runtime.main
-	/home/bikash/bin/go/src/runtime/proc.go:250
-2023-07-27T02:51:31.887+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document inserted.
-2023-07-27T02:53:17.826+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:53:21.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:53:21.832+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:53:24.423+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:53:24.819+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:53:24.822+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:53:24.866+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	1 document inserted.
-2023-07-27T02:54:15.774+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:54:17.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:54:17.875+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:54:21.835+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:54:23.847+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:54:23.849+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:54:23.880+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document inserted.
-2023-07-27T02:55:08.078+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:55:09.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:55:09.831+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:55:13.830+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:55:15.890+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:55:15.893+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:55:15.931+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document updated.
-2023-07-27T02:57:24.177+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:57:29.225+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:57:29.228+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T02:57:31.846+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:20	200 OK
-2023-07-27T02:57:33.354+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:26	Processing Html for https://quotes.toscrape.com/
-2023-07-27T02:57:33.357+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T02:57:33.426+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document updated.
-2023-07-27T02:59:56.062+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T02:59:57.829+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T02:59:57.831+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T03:00:00.231+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:21	200 OK
-2023-07-27T03:00:01.843+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:27	Processing Html for https://quotes.toscrape.com/
-2023-07-27T03:00:01.880+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T03:00:02.014+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	0 document updated.
-2023-07-27T03:00:31.296+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:58	Getting Robotstxt for+quotes.toscrape.com
-2023-07-27T03:00:32.594+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-27T03:00:32.596+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/crawler/robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-27T03:00:34.311+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:21	200 OK
-2023-07-27T03:00:35.175+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:27	Processing Html for https://quotes.toscrape.com/
-2023-07-27T03:00:35.178+0530	DEBUG	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-27T03:00:35.208+0530	INFO	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/dataprocessor/dataprocessor.go:24	1 document updated.
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.getRobotsTxtCache
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:22
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.GetRobotsTxtForUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:63
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.IsAllowedUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:75
+github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).makeRequest
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:36
+2023-07-28T02:51:57.202+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T02:51:57.205+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T02:51:57.320+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:57.323+0530	INFO	requestor/requestor.go:94	Processing Html for https://kubernetes.io/
+2023-07-28T02:51:57.326+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:57.369+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:57.418+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T02:51:57.422+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T02:51:57.433+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T02:51:57.434+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T02:51:57.438+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:57.440+0530	INFO	requestor/requestor.go:94	Processing Html for https://www.packtpub.com
+2023-07-28T02:51:57.441+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:57.446+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T02:51:57.457+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T02:51:57.505+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:57.771+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:57.830+0530	INFO	requestor/requestor.go:94	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T02:51:57.833+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:57.877+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:58.330+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:58.331+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T02:51:58.332+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:58.336+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:58.374+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:58.626+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com
+2023-07-28T02:51:58.627+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:58.629+0530	INFO	requestor/requestor.go:71	200 OK
+2023-07-28T02:51:58.630+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T02:51:58.632+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T02:51:58.685+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T02:51:58.688+0530	INFO	entity/entity.go:61	1 document updated.

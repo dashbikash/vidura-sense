@@ -4,13 +4,13 @@ import (
 	"context"
 	"time"
 
-	"github.com/dashbikash/vidura-sense/internal/common"
+	"github.com/dashbikash/vidura-sense/internal/system"
 	"github.com/redis/go-redis/v9"
 )
 
 var (
-	log    = common.GetLogger()
-	config = common.GetConfig()
+	log    = system.GetLogger()
+	config = system.GetConfig()
 	ctx    = context.Background()
 )
 

@@ -5,11 +5,11 @@ import (
 	"strings"
 
 	"github.com/common-nighthawk/go-figure"
-	"github.com/dashbikash/vidura-sense/internal/common"
 	"github.com/dashbikash/vidura-sense/internal/requestor"
+	"github.com/dashbikash/vidura-sense/internal/system"
 )
 
-var config = common.GetConfig()
+var config = system.GetConfig()
 
 func main() {
 	greet()
@@ -18,7 +18,7 @@ func main() {
 	//requestor.RequestDemo()
 	//mongo.QueryData()
 
-	requestor.RequestDemo()
+	requestor.RequestDemo2()
 }
 func greet() {
 	figure.NewFigure("Vidura Sense", "", true).Print()
