@@ -1,52 +1,246 @@
-2023-07-28T02:51:35.523+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
-2023-07-28T02:51:35.524+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
-2023-07-28T02:51:35.525+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
-2023-07-28T02:51:35.526+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
-2023-07-28T02:51:35.527+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
-2023-07-28T02:51:35.523+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
-2023-07-28T02:51:35.536+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
-2023-07-28T02:51:35.539+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
-2023-07-28T02:51:35.969+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
-2023-07-28T02:51:35.971+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
-2023-07-28T02:51:36.030+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:36.035+0530	INFO	requestor/requestor.go:94	Processing Html for https://kubernetes.io/
-2023-07-28T02:51:36.036+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:36.075+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:36.208+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-28T02:51:36.210+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-28T02:51:36.225+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-28T02:51:36.228+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-28T02:51:36.248+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-28T02:51:36.251+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-28T02:51:36.608+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:36.608+0530	INFO	requestor/requestor.go:94	Processing Html for https://www.packtpub.com
-2023-07-28T02:51:36.609+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:36.648+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:37.158+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:37.158+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/book/
-2023-07-28T02:51:37.160+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:37.199+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:37.464+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:37.466+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/love/
-2023-07-28T02:51:37.468+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:37.469+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com
-2023-07-28T02:51:37.471+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:37.485+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:37.525+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:37.548+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:38.081+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:38.135+0530	INFO	requestor/requestor.go:94	Processing Html for https://pkg.go.dev/?utm_source=godoc
-2023-07-28T02:51:38.139+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:38.221+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:56.790+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
-2023-07-28T02:51:56.791+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
-2023-07-28T02:51:56.792+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
-2023-07-28T02:51:56.793+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
-2023-07-28T02:51:56.793+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
-2023-07-28T02:51:56.794+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
-2023-07-28T02:51:56.794+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
-2023-07-28T02:51:56.804+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
-2023-07-28T02:51:56.810+0530	ERROR	redis-store/redisstore.go:34	redis: nil
+2023-07-28T10:39:46.423+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:39:49.833+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:39:49.838+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:39:52.131+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:39:52.439+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com
+2023-07-28T10:39:52.440+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:39:52.504+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:39:52.504+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:39:53.322+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:39:53.328+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:39:53.766+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:39:54.279+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T10:39:54.280+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:39:54.337+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:39:54.345+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:39:54.821+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:39:54.826+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:39:55.845+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:39:55.845+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T10:39:55.846+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:39:55.915+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:39:55.917+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T10:39:55.920+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T10:40:07.529+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:40:08.456+0530	INFO	requestor/requestor.go:45	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T10:40:08.458+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:08.511+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:08.514+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T10:40:12.805+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T10:40:12.810+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T10:40:13.293+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:40:13.295+0530	INFO	requestor/requestor.go:45	Processing Html for https://www.packtpub.com
+2023-07-28T10:40:13.296+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:13.350+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:13.351+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T10:40:13.355+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T10:40:15.333+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:40:15.336+0530	INFO	requestor/requestor.go:45	Processing Html for https://kubernetes.io/
+2023-07-28T10:40:15.338+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:15.416+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:15.416+0530	INFO	vidura-sense/main.go:28	Time elapsed 28.993172
+2023-07-28T10:40:15.416+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T10:40:15.417+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:40:15.422+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T10:40:15.423+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:40:15.418+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T10:40:15.418+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T10:40:15.432+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:40:15.435+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T10:40:16.261+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:40:16.262+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:40:16.265+0530	INFO	requestor/requestor.go:93	Processing Html for https://kubernetes.io/
+2023-07-28T10:40:16.266+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:40:16.268+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:16.326+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:16.807+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:40:16.808+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:40:16.812+0530	INFO	requestor/requestor.go:93	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T10:40:16.813+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:16.808+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:40:16.809+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:40:16.809+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T10:40:16.820+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:40:16.823+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T10:40:16.826+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:40:16.851+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:17.738+0530	INFO	requestor/requestor.go:93	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T10:40:17.739+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:17.740+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:40:17.744+0530	INFO	requestor/requestor.go:93	Processing Html for https://www.packtpub.com
+2023-07-28T10:40:17.740+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:40:17.754+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:17.847+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:17.882+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:18.824+0530	INFO	requestor/requestor.go:93	Processing Html for https://quotes.toscrape.com
+2023-07-28T10:40:18.826+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:40:18.832+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:18.834+0530	INFO	requestor/requestor.go:93	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T10:40:18.836+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:40:18.907+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:18.948+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:40:18.948+0530	INFO	vidura-sense/main.go:33	Time elapsed 3.532193
+2023-07-28T10:41:02.569+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:41:04.809+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:41:04.811+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:41:08.325+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:41:08.806+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com
+2023-07-28T10:41:08.809+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:08.911+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:08.913+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:41:10.459+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:41:10.463+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:41:10.821+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:41:10.823+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T10:41:10.824+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:10.896+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:10.896+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:41:11.201+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:41:11.205+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:41:11.530+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:41:11.530+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T10:41:11.531+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:11.729+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:11.730+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T10:41:11.732+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T10:41:12.654+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:41:12.710+0530	INFO	requestor/requestor.go:45	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T10:41:12.713+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:12.827+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:12.828+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T10:41:16.837+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T10:41:16.848+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T10:41:17.541+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:41:17.543+0530	INFO	requestor/requestor.go:45	Processing Html for https://www.packtpub.com
+2023-07-28T10:41:17.549+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:17.627+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:17.629+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T10:41:17.630+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T10:41:21.993+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T10:41:24.650+0530	INFO	requestor/requestor.go:45	Processing Html for https://kubernetes.io/
+2023-07-28T10:41:24.659+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:24.757+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:24.758+0530	INFO	vidura-sense/main.go:28	Time elapsed 22.188949
+2023-07-28T10:41:24.758+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T10:41:24.759+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:41:24.759+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:41:24.760+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T10:41:24.761+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T10:41:24.761+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T10:41:24.765+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T10:41:24.767+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T10:41:25.063+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:41:25.064+0530	INFO	requestor/requestor.go:93	Processing Html for https://kubernetes.io/
+2023-07-28T10:41:25.069+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:25.071+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:41:25.075+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:41:25.161+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:25.797+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:41:25.797+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:41:25.798+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T10:41:25.798+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T10:41:25.800+0530	INFO	requestor/requestor.go:93	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T10:41:25.805+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:25.860+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T10:41:25.862+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:41:25.864+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T10:41:25.934+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:26.727+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:41:26.729+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:41:26.730+0530	INFO	requestor/requestor.go:93	Processing Html for https://www.packtpub.com
+2023-07-28T10:41:26.737+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:26.836+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:28.179+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:41:30.330+0530	INFO	requestor/requestor.go:70	200 OK
+2023-07-28T10:41:30.330+0530	INFO	requestor/requestor.go:93	Processing Html for https://quotes.toscrape.com
+2023-07-28T10:41:30.333+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:30.415+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:30.825+0530	INFO	requestor/requestor.go:93	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T10:41:30.828+0530	INFO	requestor/requestor.go:93	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T10:41:30.833+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:30.849+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T10:41:30.981+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:30.994+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T10:41:30.995+0530	INFO	vidura-sense/main.go:33	Time elapsed 6.237039
+2023-07-28T12:57:04.873+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T12:57:04.923+0530	ERROR	redis-store/redisstore.go:34	redis: nil
+github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.getRobotsTxtCache
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:22
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.GetRobotsTxtForUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:63
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.IsAllowedUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:75
+github.com/dashbikash/vidura-sense/internal/spider.(*Spider).Run
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/spider.go:39
+github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo1
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:62
+main.main
+	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:25
+runtime.main
+	/home/bikash/bin/go/src/runtime/proc.go:250
+2023-07-28T12:57:06.761+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T12:57:06.775+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T12:57:07.834+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T12:57:08.147+0530	INFO	requestor/requestor.go:45	Processing Html for https://quotes.toscrape.com
+2023-07-28T12:57:25.997+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T12:57:27.840+0530	INFO	entity/entity.go:61	1 document updated.
+2023-07-28T12:57:40.815+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T12:57:40.816+0530	ERROR	redis-store/redisstore.go:34	redis: nil
+github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.getRobotsTxtCache
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:22
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.GetRobotsTxtForUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:63
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.IsAllowedUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:75
+github.com/dashbikash/vidura-sense/internal/spider.(*Spider).Run
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/spider.go:39
+github.com/dashbikash/vidura-sense/internal/requestor.RequestDemo1
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/requestor/requestor.go:62
+main.main
+	/home/bikash/Documents/Dev/vidura/vidura-sense/main.go:25
+runtime.main
+	/home/bikash/bin/go/src/runtime/proc.go:250
+2023-07-28T12:57:41.808+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:metalsucks.net
+2023-07-28T12:57:41.816+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T12:57:41.877+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T12:59:33.388+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T12:59:34.178+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T12:59:34.183+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T12:59:35.387+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T13:01:28.495+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T13:01:29.132+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T13:01:29.135+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T13:01:30.154+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T16:49:13.143+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T16:49:14.698+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T16:49:14.747+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T16:49:16.134+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T16:49:16.748+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T16:49:16.751+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T16:49:16.894+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T16:49:16.895+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T16:49:16.897+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T16:49:18.773+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T16:49:18.783+0530	INFO	requestor/requestor.go:37	Processing Html for https://www.metalsucks.net/
+2023-07-28T16:49:18.789+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T16:49:18.867+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T16:49:18.867+0530	INFO	vidura-sense/main.go:28	Time elapsed 5.723778
+2023-07-28T17:33:50.292+0530	INFO	vidura-sense/main.go:34	Time elapsed 0.000027
+2023-07-28T17:33:50.292+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:41:15.064+0530	INFO	vidura-sense/main.go:34	Time elapsed 0.000023
+2023-07-28T17:41:15.064+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:41:15.064+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:42:20.042+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T17:42:20.042+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:42:20.042+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T17:42:20.042+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T17:42:20.042+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:42:20.042+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:42:20.088+0530	ERROR	redis-store/redisstore.go:34	redis: nil
 github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
 	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
 github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.getRobotsTxtCache
@@ -57,35 +251,1315 @@ github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.IsAllowedUrl
 	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:75
 github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).makeRequest
 	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:36
-2023-07-28T02:51:57.202+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
-2023-07-28T02:51:57.205+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
-2023-07-28T02:51:57.320+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:57.323+0530	INFO	requestor/requestor.go:94	Processing Html for https://kubernetes.io/
-2023-07-28T02:51:57.326+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:57.369+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:57.418+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-28T02:51:57.422+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-28T02:51:57.433+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-28T02:51:57.434+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-28T02:51:57.438+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:57.440+0530	INFO	requestor/requestor.go:94	Processing Html for https://www.packtpub.com
-2023-07-28T02:51:57.441+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:57.446+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
-2023-07-28T02:51:57.457+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
-2023-07-28T02:51:57.505+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:57.771+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:57.830+0530	INFO	requestor/requestor.go:94	Processing Html for https://pkg.go.dev/?utm_source=godoc
-2023-07-28T02:51:57.833+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:57.877+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:58.330+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:58.331+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/book/
-2023-07-28T02:51:58.332+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:58.336+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:58.374+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:58.626+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com
-2023-07-28T02:51:58.627+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:58.629+0530	INFO	requestor/requestor.go:71	200 OK
-2023-07-28T02:51:58.630+0530	INFO	requestor/requestor.go:94	Processing Html for https://quotes.toscrape.com/tag/love/
-2023-07-28T02:51:58.632+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
-2023-07-28T02:51:58.685+0530	INFO	entity/entity.go:61	1 document updated.
-2023-07-28T02:51:58.688+0530	INFO	entity/entity.go:61	1 document updated.
+github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).Run.func1
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:123
+2023-07-28T17:42:20.093+0530	ERROR	redis-store/redisstore.go:34	redis: nil
+github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.getRobotsTxtCache
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:22
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.GetRobotsTxtForUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:63
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.IsAllowedUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:75
+github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).makeRequest
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:36
+github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).Run.func1
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:123
+2023-07-28T17:42:20.093+0530	ERROR	redis-store/redisstore.go:34	redis: nil
+github.com/dashbikash/vidura-sense/internal/datastore/redis-store.(*RedisStore).GetString
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/datastore/redis-store/redisstore.go:34
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.getRobotsTxtCache
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:22
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.GetRobotsTxtForUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:63
+github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util.IsAllowedUrl
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/robotstxt-util/robotstxtutil.go:75
+github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).makeRequest
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:36
+github.com/dashbikash/vidura-sense/internal/spider.(*AsyncSpider).Run.func1
+	/home/bikash/Documents/Dev/vidura/vidura-sense/internal/spider/asyncspider.go:123
+2023-07-28T17:42:23.014+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:kubernetes.io
+2023-07-28T17:42:23.050+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T17:42:23.219+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T17:42:23.223+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T17:42:23.231+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T17:42:23.233+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T17:42:23.242+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T17:42:23.244+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T17:42:23.354+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:42:23.358+0530	INFO	requestor/requestor.go:77	Processing Html for https://kubernetes.io/
+2023-07-28T17:42:23.359+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:42:23.490+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T17:42:23.495+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T17:42:23.583+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:42:23.777+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:42:23.780+0530	INFO	requestor/requestor.go:77	Processing Html for https://www.packtpub.com
+2023-07-28T17:42:23.781+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:42:23.945+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:42:24.053+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:godoc.org
+2023-07-28T17:42:24.056+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T17:42:24.150+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:42:24.150+0530	INFO	requestor/requestor.go:77	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T17:42:24.151+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:42:24.286+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:42:24.438+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:42:24.441+0530	INFO	requestor/requestor.go:77	Processing Html for https://quotes.toscrape.com
+2023-07-28T17:42:24.442+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:42:24.444+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:42:24.447+0530	INFO	requestor/requestor.go:77	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T17:42:24.456+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:42:24.503+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:42:24.517+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:42:24.729+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:42:24.769+0530	INFO	requestor/requestor.go:77	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T17:42:24.772+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:42:24.807+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:42:24.808+0530	INFO	vidura-sense/main.go:34	Time elapsed 4.766028
+2023-07-28T17:43:02.543+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:43:02.545+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:43:02.546+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T17:43:02.551+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: godoc.org
+2023-07-28T17:43:02.552+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.packtpub.com
+2023-07-28T17:43:02.543+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: kubernetes.io
+2023-07-28T17:43:02.560+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:kubernetes.io
+2023-07-28T17:43:02.562+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:godoc.org
+2023-07-28T17:43:03.279+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T17:43:03.285+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T17:43:03.285+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T17:43:03.291+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T17:43:03.293+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T17:43:03.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T17:43:03.612+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:43:03.613+0530	INFO	requestor/requestor.go:77	Processing Html for https://kubernetes.io/
+2023-07-28T17:43:03.616+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:43:03.663+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:43:04.444+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:43:04.463+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:packtpub.com
+2023-07-28T17:43:04.471+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.packtpub.com
+2023-07-28T17:43:04.827+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:43:04.827+0530	INFO	requestor/requestor.go:77	Processing Html for https://www.packtpub.com
+2023-07-28T17:43:04.829+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:43:04.831+0530	INFO	requestor/requestor.go:77	Processing Html for https://pkg.go.dev/?utm_source=godoc
+2023-07-28T17:43:04.834+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:43:04.862+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:43:04.888+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:43:05.430+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:43:05.430+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:43:05.431+0530	INFO	requestor/requestor.go:77	Processing Html for https://quotes.toscrape.com/tag/book/
+2023-07-28T17:43:05.433+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:43:05.501+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:43:05.726+0530	INFO	requestor/requestor.go:62	200 OK
+2023-07-28T17:43:05.727+0530	INFO	requestor/requestor.go:77	Processing Html for https://quotes.toscrape.com
+2023-07-28T17:43:05.728+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:43:05.815+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:43:06.025+0530	INFO	requestor/requestor.go:77	Processing Html for https://quotes.toscrape.com/tag/love/
+2023-07-28T17:43:06.026+0530	DEBUG	mongo-store/mongostore.go:25	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T17:43:06.062+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T17:43:06.062+0530	INFO	vidura-sense/main.go:34	Time elapsed 3.518455
+2023-07-28T18:26:18.702+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:26:23.829+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:26:23.867+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:26:25.494+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:26:27.033+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:26:27.036+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:26:27.120+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:26:27.120+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:26:27.122+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:26:28.433+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:26:28.442+0530	INFO	requestor/requestor.go:37	Processing Html for https://www.metalsucks.net/
+2023-07-28T18:26:28.447+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:26:28.520+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-28T18:26:28.521+0530	INFO	vidura-sense/main.go:29	Time elapsed 9.818751
+2023-07-28T18:26:51.193+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:26:51.193+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:26:51.209+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:26:51.838+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:26:51.840+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:26:55.197+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:26:55.831+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:26:55.832+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:26:55.832+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:26:55.832+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:26:55.833+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:26:55.866+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:26:55.884+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:26:55.884+0530	INFO	vidura-sense/main.go:29	Time elapsed 4.690778
+2023-07-28T18:28:01.233+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:28:01.235+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:28:01.250+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:28:02.608+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:28:02.651+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:28:05.848+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:07.830+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:07.831+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:07.831+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:07.832+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:07.832+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:07.913+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:07.919+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:07.919+0530	INFO	vidura-sense/main.go:29	Time elapsed 6.686246
+2023-07-28T18:28:11.081+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:28:11.081+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:28:11.089+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:28:11.852+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:28:11.855+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:28:15.247+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:15.765+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:15.766+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:15.766+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:15.768+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:15.771+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:15.809+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:15.844+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:15.845+0530	INFO	vidura-sense/main.go:29	Time elapsed 4.763621
+2023-07-28T18:28:20.257+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:28:20.258+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:28:20.257+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:28:21.400+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:28:21.438+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:28:21.847+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:21.859+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:21.862+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:21.906+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:23.607+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:25.657+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:25.658+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:25.697+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:25.698+0530	INFO	vidura-sense/main.go:29	Time elapsed 5.440979
+2023-07-28T18:28:35.756+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:28:37.591+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:28:37.594+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:28:41.977+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:42.922+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:42.929+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:42.962+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:42.964+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:28:42.968+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:28:44.662+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:44.669+0530	INFO	requestor/requestor.go:37	Processing Html for https://www.metalsucks.net/
+2023-07-28T18:28:44.676+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:44.728+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:44.728+0530	INFO	vidura-sense/main.go:29	Time elapsed 8.971798
+2023-07-28T18:28:47.985+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T18:28:49.917+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T18:28:49.919+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T18:28:53.878+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:55.884+0530	INFO	requestor/requestor.go:37	Processing Html for https://quotes.toscrape.com
+2023-07-28T18:28:55.887+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:55.926+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:55.927+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T18:28:55.928+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T18:28:56.841+0530	INFO	requestor/requestor.go:22	200 OK
+2023-07-28T18:28:56.848+0530	INFO	requestor/requestor.go:37	Processing Html for https://www.metalsucks.net/
+2023-07-28T18:28:56.856+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T18:28:56.892+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T18:28:56.908+0530	INFO	vidura-sense/main.go:29	Time elapsed 8.922983
+2023-07-28T19:01:57.517+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:01:58.537+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:01:58.540+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:01:59.717+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:02:00.020+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:02:00.021+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:02:00.098+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:02:00.098+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:02:00.102+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:02:00.405+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:02:00.427+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:02:00.436+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:02:00.520+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:02:00.521+0530	INFO	vidura-sense/main.go:29	Time elapsed 3.003882
+2023-07-28T19:02:33.566+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:02:34.380+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:02:34.382+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:02:35.452+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:02:35.798+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:02:35.804+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:02:35.835+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:02:35.836+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:02:35.838+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:02:36.265+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:02:36.272+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:02:36.281+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:02:36.353+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:02:36.354+0530	INFO	vidura-sense/main.go:29	Time elapsed 2.788165
+2023-07-28T19:02:55.481+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:02:56.725+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:02:56.728+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:03:01.847+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:03:02.906+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:03:02.910+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:03:02.977+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:03:02.977+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:03:02.981+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:03:04.639+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:03:04.648+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:03:04.657+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:03:04.704+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:03:04.705+0530	INFO	vidura-sense/main.go:29	Time elapsed 9.224014
+2023-07-28T19:03:47.274+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:03:47.924+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:03:47.926+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:03:48.978+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:03:49.289+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:03:49.291+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:03:49.325+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:03:49.325+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:03:49.327+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:03:49.583+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:03:49.590+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:03:49.594+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:03:49.638+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:03:49.638+0530	INFO	vidura-sense/main.go:29	Time elapsed 2.364453
+2023-07-28T19:05:40.998+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:05:41.626+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:05:41.666+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:05:42.655+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:05:42.966+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:05:42.970+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:05:43.004+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:05:43.005+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:05:43.007+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:05:47.865+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:05:47.879+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:05:47.885+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:05:47.917+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:05:47.917+0530	INFO	requestor/requestor.go:59	Time elapsed 6.919177
+2023-07-28T19:05:47.917+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:05:47.919+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:05:47.954+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:05:48.758+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:05:48.764+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:05:48.777+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:05:48.781+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:05:48.809+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:05:48.832+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:05:49.624+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:05:49.820+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:05:49.822+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:05:49.888+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:05:49.892+0530	INFO	requestor/requestor.go:64	Time elapsed 1.974779
+2023-07-28T19:05:49.895+0530	INFO	vidura-sense/main.go:29	Time elapsed 8.897343
+2023-07-28T19:06:12.185+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:06:12.196+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:06:12.199+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:06:12.700+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:12.715+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:06:12.723+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:12.766+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:13.063+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:06:13.065+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:06:14.142+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:14.507+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:06:14.510+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:14.587+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:14.587+0530	INFO	requestor/requestor.go:59	Time elapsed 2.402287
+2023-07-28T19:06:14.588+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:06:14.914+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:06:14.926+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:06:15.239+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:15.242+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:06:15.243+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:15.274+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:15.274+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:06:15.277+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:06:15.365+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:15.379+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:06:15.383+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:15.442+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:15.443+0530	INFO	requestor/requestor.go:64	Time elapsed 0.854718
+2023-07-28T19:06:15.443+0530	INFO	vidura-sense/main.go:29	Time elapsed 3.258005
+2023-07-28T19:06:20.877+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:06:20.877+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:06:20.884+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:06:21.847+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:06:21.853+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:06:22.589+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:22.609+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:06:22.615+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:22.650+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:25.564+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:28.547+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:06:28.548+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:28.583+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:28.585+0530	INFO	requestor/requestor.go:59	Time elapsed 7.707843
+2023-07-28T19:06:28.585+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:06:29.528+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:06:29.531+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:06:29.849+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:29.850+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:06:29.851+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:29.893+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:29.894+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:06:29.898+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:06:31.672+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:06:31.683+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:06:31.686+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:06:31.729+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:06:31.729+0530	INFO	requestor/requestor.go:64	Time elapsed 3.143820
+2023-07-28T19:06:31.729+0530	INFO	vidura-sense/main.go:29	Time elapsed 10.851963
+2023-07-28T19:26:28.547+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:26:28.547+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:26:28.612+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:26:31.670+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:26:31.688+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:26:31.697+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:26:31.780+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:26:33.542+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:26:33.583+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:26:37.692+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:26:38.843+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:26:38.845+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:26:38.919+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:26:38.919+0530	INFO	requestor/requestor.go:59	Time elapsed 10.373001
+2023-07-28T19:26:38.920+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-28T19:26:38.920+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-28T19:26:38.922+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-28T19:26:39.801+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:26:39.805+0530	DEBUG	redis-store/redisstore.go:41	Adding key torobots-txt:quotes.toscrape.com
+2023-07-28T19:26:39.807+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-28T19:26:39.810+0530	INFO	requestor/requestor.go:38	Processing Html for https://www.metalsucks.net/
+2023-07-28T19:26:39.823+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:26:39.871+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:26:41.676+0530	INFO	requestor/requestor.go:23	200 OK
+2023-07-28T19:26:41.677+0530	INFO	requestor/requestor.go:38	Processing Html for https://quotes.toscrape.com
+2023-07-28T19:26:41.678+0530	DEBUG	mongo-store/mongostore.go:22	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-28T19:26:41.743+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-28T19:26:41.743+0530	INFO	requestor/requestor.go:64	Time elapsed 2.822577
+2023-07-28T19:26:41.743+0530	INFO	vidura-sense/main.go:29	Time elapsed 13.196316
+2023-07-28T21:01:31.996+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:01:32.038+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:01:32.038+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:01:32.038+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:01:32.038+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:03:38.072+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:04:07.045+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:04:07.046+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:04:07.046+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:04:07.046+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:04:07.046+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:04:57.729+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3128
+2023-07-28T21:06:35.743+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3129
+2023-07-28T21:06:35.743+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3130
+2023-07-28T21:08:04.158+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3129
+2023-07-28T21:08:31.861+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3130
+2023-07-28T21:09:05.062+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3129
+2023-07-28T21:09:05.992+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3130
+2023-07-28T21:09:58.558+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3129
+2023-07-28T21:10:00.760+0530	DEBUG	spider/spider.go:186	http://test:test@localhost:3130
+2023-07-28T21:10:53.772+0530	DEBUG	spider/spider.go:186	Proxy2
+2023-07-28T21:10:53.772+0530	DEBUG	spider/spider.go:186	Proxy3
+2023-07-28T21:10:53.772+0530	DEBUG	spider/spider.go:186	Proxy4
+2023-07-28T21:10:53.772+0530	DEBUG	spider/spider.go:186	Proxy1
+2023-07-28T21:10:53.773+0530	DEBUG	spider/spider.go:186	Proxy2
+2023-07-28T21:11:22.662+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:22.662+0530	DEBUG	spider/spider.go:182	Proxy2
+2023-07-28T21:11:22.662+0530	DEBUG	spider/spider.go:182	Proxy3
+2023-07-28T21:11:22.662+0530	DEBUG	spider/spider.go:182	Proxy4
+2023-07-28T21:11:22.662+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:27.661+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:27.662+0530	DEBUG	spider/spider.go:182	Proxy2
+2023-07-28T21:11:27.662+0530	DEBUG	spider/spider.go:182	Proxy3
+2023-07-28T21:11:27.662+0530	DEBUG	spider/spider.go:182	Proxy4
+2023-07-28T21:11:27.662+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy2
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy3
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy4
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy2
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy3
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy4
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy1
+2023-07-28T21:11:38.881+0530	DEBUG	spider/spider.go:182	Proxy2
+2023-07-28T21:15:40.458+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:15:40.459+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:03.525+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:03.526+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:03.527+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:18:21.209+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:21.210+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.211+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.212+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:18:21.212+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:19.678+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:19.679+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.680+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.680+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:19.680+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:33.071+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:33.071+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:33.071+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:33.071+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:33.071+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:33.071+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:33.072+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:33.073+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:33.073+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:33.073+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:33.073+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:33.073+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3130
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:182	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3129
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T21:33:37.683+0530	DEBUG	spider/spider.go:174	http://test:test@localhost:3128
+2023-07-28T22:22:44.780+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3128
+2023-07-28T22:22:44.781+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3129
+2023-07-28T22:22:44.781+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3130
+2023-07-28T22:22:44.781+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3128
+2023-07-28T22:22:44.781+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3129
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3130
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3128
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3129
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3130
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:189	http://test:test@localhost:3128
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:22:44.782+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:22:44.783+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.485+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:25:17.486+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:25:17.488+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:17.490+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.492+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.494+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:17.495+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.495+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.495+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.496+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.496+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:17.496+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:17.496+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:17.496+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:25:40.744+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:28:59.726+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:29:49.864+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:29:49.864+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:29:49.864+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:29:49.864+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3131
+2023-07-28T22:29:49.865+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3131
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3131
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3131
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:29:49.866+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:01.403+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:01.403+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:01.404+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:01.404+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3131
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3131
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:01.405+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:30.123+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:30.124+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:30.124+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:33.348+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:33.349+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:33.349+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:33.350+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:33.350+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:33.351+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:33.352+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:35.132+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:35.132+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:35.133+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:36.803+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:36.803+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:36.804+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:38.323+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:38.323+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:38.324+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:40.371+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:40.371+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-28T22:31:40.372+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-28T22:31:40.372+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-29T00:59:03.518+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3130
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3131
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:190	http://test:test@localhost:3129
+2023-07-29T00:59:03.523+0530	INFO	vidura-sense/main.go:42	Random
+
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-29T00:59:03.523+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3128
+2023-07-29T00:59:03.524+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-29T00:59:03.524+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3129
+2023-07-29T00:59:03.524+0530	DEBUG	spider/spider.go:181	http://test:test@localhost:3130
+2023-07-29T01:10:50.601+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:10:50.601+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:10:50.632+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:10:52.884+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:10:52.894+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:10:52.905+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:10:52.915+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:10:52.927+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:10:53.027+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:10:53.910+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:10:54.236+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:10:54.238+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:10:54.293+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:10:54.293+0530	INFO	requestor/requestor.go:61	Time elapsed 3.692184
+2023-07-29T01:10:54.293+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:10:54.293+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:10:54.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:10:54.353+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:10:54.368+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:10:54.384+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:10:54.469+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T01:10:54.617+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:10:54.625+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:10:54.962+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:10:54.963+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:10:54.964+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:10:55.025+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T01:10:55.027+0530	INFO	requestor/requestor.go:66	Time elapsed 0.733974
+2023-07-29T01:10:55.027+0530	INFO	vidura-sense/main.go:27	Time elapsed 4.426280
+2023-07-29T01:12:45.326+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:12:45.328+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:12:45.331+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:12:45.954+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:12:45.957+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:12:46.290+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:12:46.301+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:12:46.308+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:12:46.351+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:12:46.928+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:12:47.241+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:12:47.242+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:12:47.288+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:12:47.288+0530	INFO	requestor/requestor.go:61	Time elapsed 1.961742
+2023-07-29T01:12:47.288+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000005
+2023-07-29T01:12:47.288+0530	INFO	vidura-sense/main.go:26	Time elapsed 1.961864
+2023-07-29T01:14:41.259+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:14:41.259+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:14:41.272+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:14:41.560+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:14:41.570+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:14:41.579+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:14:41.623+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:14:41.887+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:14:41.889+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:14:42.877+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:14:43.194+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:14:43.195+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:14:43.226+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:14:43.226+0530	INFO	requestor/requestor.go:61	Time elapsed 1.966810
+2023-07-29T01:14:43.226+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000004
+2023-07-29T01:14:43.226+0530	INFO	vidura-sense/main.go:26	Time elapsed 1.967099
+2023-07-29T01:25:07.714+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000032
+2023-07-29T01:25:07.714+0530	INFO	vidura-sense/main.go:26	Time elapsed 0.000209
+2023-07-29T01:26:13.420+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000023
+2023-07-29T01:26:13.421+0530	INFO	vidura-sense/main.go:27	Time elapsed 0.000495
+2023-07-29T01:26:13.421+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:26:13.421+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:26:13.423+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:26:13.663+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:26:13.676+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:26:13.681+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:26:13.744+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:26:14.120+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:26:14.122+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:26:15.079+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:26:15.391+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:26:15.392+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:26:15.440+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:30:36.371+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000003
+2023-07-29T01:30:36.373+0530	INFO	scheduler/scheduler.go:24	Time elapsed 0.001379
+2023-07-29T01:30:36.372+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:30:36.372+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:30:36.398+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:30:36.598+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:30:36.611+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:30:36.615+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:30:36.652+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:30:37.013+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:30:37.015+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:30:37.985+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:30:38.296+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:30:38.297+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:30:38.344+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:30:56.388+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:30:56.388+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000009
+2023-07-29T01:30:56.388+0530	INFO	scheduler/scheduler.go:24	Time elapsed 0.000613
+2023-07-29T01:30:56.388+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:30:56.390+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:30:56.444+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:30:56.457+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:30:56.470+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:30:56.529+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:30:56.701+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:30:57.030+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:30:57.349+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:30:57.662+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:30:57.664+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:30:57.695+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:31:16.404+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000006
+2023-07-29T01:31:16.404+0530	INFO	scheduler/scheduler.go:24	Time elapsed 0.000189
+2023-07-29T01:31:16.404+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:31:16.404+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:31:16.408+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:31:16.605+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:31:16.613+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:31:16.626+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:31:16.682+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T01:31:16.858+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:31:16.860+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:31:17.304+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:31:17.665+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:31:17.667+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:31:17.704+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T01:31:36.404+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000008
+2023-07-29T01:31:36.404+0530	INFO	scheduler/scheduler.go:24	Time elapsed 0.000266
+2023-07-29T01:31:36.404+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:31:36.404+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:31:36.407+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:31:36.457+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:31:36.468+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:31:36.472+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:31:36.518+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:31:36.721+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:31:36.725+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:31:37.130+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:31:37.443+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:31:37.445+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:31:37.487+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T01:31:56.404+0530	INFO	requestor/requestor.go:66	Time elapsed 0.000003
+2023-07-29T01:31:56.404+0530	INFO	scheduler/scheduler.go:24	Time elapsed 0.000136
+2023-07-29T01:31:56.404+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T01:31:56.404+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T01:31:56.408+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T01:31:56.469+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:31:56.476+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T01:31:56.481+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:31:56.512+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T01:31:56.721+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T01:31:56.724+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T01:31:57.054+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T01:31:57.366+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T01:31:57.367+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T01:31:57.398+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:05:29.289+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:05:29.288+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:05:29.336+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:05:30.770+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:05:30.778+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:05:31.374+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:05:31.384+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:05:31.396+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:05:31.496+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T02:05:32.846+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:05:34.062+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:05:34.065+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:05:34.106+0530	INFO	entity/entity.go:58	1 document updated.
+2023-07-29T02:05:34.109+0530	INFO	requestor/requestor.go:66	Time elapsed 4.820717
+2023-07-29T02:05:34.109+0530	INFO	scheduler/scheduler.go:24	Time elapsed 4.820898
+2023-07-29T02:05:49.292+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:05:49.293+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:05:49.297+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:05:50.094+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:05:50.098+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:05:50.101+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:05:50.107+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:05:50.119+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:05:50.163+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:05:50.810+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:05:51.121+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:05:51.122+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:05:51.155+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:05:51.156+0530	INFO	requestor/requestor.go:66	Time elapsed 1.863669
+2023-07-29T02:05:51.156+0530	INFO	scheduler/scheduler.go:24	Time elapsed 1.863864
+2023-07-29T02:06:09.309+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:06:09.309+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:06:09.312+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:06:10.255+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:06:10.257+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:06:10.262+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:06:10.266+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:06:10.273+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:06:10.309+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:06:11.345+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:06:13.040+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:06:13.042+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:06:13.087+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:06:13.088+0530	INFO	requestor/requestor.go:66	Time elapsed 3.778494
+2023-07-29T02:06:13.088+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.778533
+2023-07-29T02:06:29.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:06:29.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:06:29.301+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:06:29.505+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:06:29.515+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:06:29.519+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:06:29.561+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:06:30.324+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:06:30.327+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:06:31.633+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:06:32.074+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:06:32.076+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:06:32.150+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:06:32.151+0530	INFO	requestor/requestor.go:66	Time elapsed 2.854862
+2023-07-29T02:06:32.151+0530	INFO	scheduler/scheduler.go:24	Time elapsed 2.854896
+2023-07-29T02:06:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:06:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:06:49.313+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:06:49.369+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:06:49.398+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:06:49.412+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:06:49.533+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:06:50.191+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:06:50.195+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:06:50.831+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:06:52.686+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:06:52.687+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:06:52.738+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:06:52.738+0530	INFO	requestor/requestor.go:66	Time elapsed 3.430350
+2023-07-29T02:06:52.738+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.430383
+2023-07-29T02:07:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:07:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:07:09.315+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:07:09.866+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:07:09.869+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:07:09.872+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:07:09.878+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:07:09.882+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:07:09.920+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:07:10.263+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:07:10.701+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:07:10.702+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:07:10.744+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:07:10.744+0530	INFO	requestor/requestor.go:66	Time elapsed 1.436302
+2023-07-29T02:07:10.744+0530	INFO	scheduler/scheduler.go:24	Time elapsed 1.436337
+2023-07-29T02:07:29.300+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:07:29.300+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:07:29.302+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:07:30.128+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:07:30.131+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:07:30.134+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:07:30.141+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:07:30.145+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:07:30.217+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:07:30.833+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:07:32.686+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:07:32.687+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:07:32.719+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:07:32.719+0530	INFO	requestor/requestor.go:66	Time elapsed 3.419277
+2023-07-29T02:07:32.719+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.419312
+2023-07-29T02:07:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:07:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:07:49.312+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:07:50.198+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:07:50.201+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:07:50.203+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:07:50.207+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:07:50.228+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:07:50.268+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:07:50.824+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:07:52.848+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:07:52.849+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:07:52.878+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:07:52.878+0530	INFO	requestor/requestor.go:66	Time elapsed 3.569855
+2023-07-29T02:07:52.878+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.569886
+2023-07-29T02:08:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:08:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:08:09.314+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:08:10.269+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:08:10.272+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:08:10.274+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:08:10.282+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:08:10.292+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:08:10.352+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:08:10.886+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:08:13.105+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:08:13.106+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:08:13.150+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:08:13.150+0530	INFO	requestor/requestor.go:66	Time elapsed 3.842584
+2023-07-29T02:08:13.150+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.842622
+2023-07-29T02:08:29.307+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:08:29.307+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:08:29.310+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:08:30.135+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:08:30.137+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:08:30.145+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:08:30.148+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:08:30.150+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:08:30.177+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:08:30.830+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:08:32.813+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:08:32.814+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:08:32.848+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:08:32.849+0530	INFO	requestor/requestor.go:66	Time elapsed 3.542393
+2023-07-29T02:08:32.851+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.543760
+2023-07-29T02:08:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:08:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:08:49.310+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:08:50.206+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:08:50.208+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:08:50.213+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:08:50.216+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:08:50.223+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:08:50.296+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:08:51.540+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:08:52.813+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:08:52.814+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:08:52.857+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:08:52.857+0530	INFO	requestor/requestor.go:66	Time elapsed 3.549549
+2023-07-29T02:08:52.857+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.549738
+2023-07-29T02:09:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:09:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:09:09.311+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:09:09.873+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:09:09.878+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:09:09.885+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:09:09.886+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:09:09.893+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:09:09.934+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:09:10.278+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:09:10.830+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:09:10.831+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:09:10.869+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:09:10.871+0530	INFO	requestor/requestor.go:66	Time elapsed 1.561482
+2023-07-29T02:09:10.871+0530	INFO	scheduler/scheduler.go:24	Time elapsed 1.563563
+2023-07-29T02:09:29.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:09:29.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:09:29.351+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:09:30.143+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:09:30.145+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:09:30.149+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:09:30.156+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:09:30.157+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:09:30.194+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:09:30.861+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:09:33.233+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:09:33.234+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:09:33.272+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:09:33.272+0530	INFO	requestor/requestor.go:66	Time elapsed 3.964156
+2023-07-29T02:09:33.272+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.964295
+2023-07-29T02:09:49.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:09:49.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:09:49.298+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:09:50.214+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:09:50.217+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:09:50.220+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:09:50.224+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:09:50.231+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:09:50.292+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:09:50.931+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:09:52.876+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:09:52.878+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:09:52.927+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:09:52.929+0530	INFO	requestor/requestor.go:66	Time elapsed 3.633047
+2023-07-29T02:09:52.930+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.633731
+2023-07-29T02:10:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:10:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:10:09.315+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:10:10.285+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:10:10.288+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:10:10.289+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:10:10.296+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:10:10.301+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:10:10.375+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:10:10.900+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:10:12.813+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:10:12.814+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:10:12.844+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:10:12.844+0530	INFO	requestor/requestor.go:66	Time elapsed 3.535904
+2023-07-29T02:10:12.844+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.535966
+2023-07-29T02:10:29.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:10:29.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:10:29.310+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:10:29.958+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:10:29.961+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:10:29.970+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:10:29.973+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:10:29.978+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:10:30.012+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:10:30.800+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:10:32.848+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:10:32.849+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:10:32.927+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:10:32.927+0530	INFO	requestor/requestor.go:66	Time elapsed 3.619102
+2023-07-29T02:10:32.927+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.619185
+2023-07-29T02:10:49.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:10:49.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:10:49.300+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:10:50.221+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:10:50.223+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:10:50.227+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:10:50.241+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:10:50.251+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:10:50.301+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:10:50.832+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:10:52.837+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:10:52.838+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:10:52.872+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:10:52.873+0530	INFO	requestor/requestor.go:66	Time elapsed 3.576906
+2023-07-29T02:10:52.873+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.576941
+2023-07-29T02:11:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:11:09.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:11:09.310+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:11:09.665+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:11:09.667+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:11:10.295+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:11:11.125+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:11:11.125+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:11:11.126+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:11:11.146+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:11:11.151+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:11:11.170+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:11:11.200+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:11:11.201+0530	INFO	requestor/requestor.go:66	Time elapsed 1.892723
+2023-07-29T02:11:11.201+0530	INFO	scheduler/scheduler.go:24	Time elapsed 1.892812
+2023-07-29T02:11:29.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:11:29.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:11:29.311+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:11:30.159+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:11:30.160+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:11:30.164+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:11:30.169+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:11:30.186+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:11:30.244+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:11:30.877+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:11:32.845+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:11:32.846+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:11:32.879+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:11:32.879+0530	INFO	requestor/requestor.go:66	Time elapsed 3.571129
+2023-07-29T02:11:32.879+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.571192
+2023-07-29T02:11:49.307+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:11:49.307+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:11:49.347+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:11:50.229+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:11:50.232+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:11:50.234+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:11:50.238+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:11:50.252+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:11:50.295+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:11:50.831+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:11:52.845+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:11:52.847+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:11:52.887+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:11:52.889+0530	INFO	requestor/requestor.go:66	Time elapsed 3.581995
+2023-07-29T02:11:52.889+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.582749
+2023-07-29T02:12:09.304+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:12:09.304+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:12:09.306+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:12:10.300+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:12:10.304+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:12:10.306+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:12:10.315+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:12:10.321+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:12:10.358+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:12:10.831+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:12:13.488+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:12:13.490+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:12:13.519+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:12:13.519+0530	INFO	requestor/requestor.go:66	Time elapsed 4.215288
+2023-07-29T02:12:13.520+0530	INFO	scheduler/scheduler.go:24	Time elapsed 4.215422
+2023-07-29T02:12:29.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:12:29.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:12:29.300+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:12:30.166+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:12:30.168+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:12:30.174+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:12:30.180+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:12:30.201+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:12:30.244+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:12:31.477+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:12:32.845+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:12:32.847+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:12:32.934+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:12:32.934+0530	INFO	requestor/requestor.go:66	Time elapsed 3.638287
+2023-07-29T02:12:32.937+0530	INFO	scheduler/scheduler.go:24	Time elapsed 3.641648
+2023-07-29T02:12:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:12:49.308+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:12:49.311+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net
+2023-07-29T02:12:50.237+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:12:50.241+0530	DEBUG	redis-store/redisstore.go:42	Adding key torobots-txt:quotes.toscrape.com
+2023-07-29T02:12:50.257+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:quotes.toscrape.com
+2023-07-29T02:12:50.262+0530	INFO	requestor/requestor.go:39	Processing Html for https://www.metalsucks.net/
+2023-07-29T02:12:50.273+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:12:50.315+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:12:50.830+0530	INFO	requestor/requestor.go:24	200 OK
+2023-07-29T02:12:52.090+0530	INFO	requestor/requestor.go:39	Processing Html for https://quotes.toscrape.com
+2023-07-29T02:12:52.092+0530	DEBUG	mongo-store/mongostore.go:23	Connecting to Mongodb mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
+2023-07-29T02:12:52.118+0530	INFO	entity/entity.go:58	0 document updated.
+2023-07-29T02:12:52.118+0530	INFO	requestor/requestor.go:66	Time elapsed 2.810112
+2023-07-29T02:12:52.118+0530	INFO	scheduler/scheduler.go:24	Time elapsed 2.810149
+2023-07-29T02:13:09.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: www.metalsucks.net
+2023-07-29T02:13:09.296+0530	DEBUG	robotstxt-util/robotstxtutil.go:58	Getting Robotstxt: quotes.toscrape.com
+2023-07-29T02:13:09.298+0530	DEBUG	robotstxt-util/robotstxtutil.go:82	Getting Robotstxt for:www.metalsucks.net

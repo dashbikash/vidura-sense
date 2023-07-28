@@ -7,7 +7,8 @@ import (
 )
 
 var (
-	config = system.GetConfig()
+	config = system.Config
+
 	router = gin.Default()
 )
 

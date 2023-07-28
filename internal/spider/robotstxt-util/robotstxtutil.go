@@ -13,8 +13,8 @@ import (
 )
 
 var (
-	log    = system.GetLogger()
-	config = system.GetConfig()
+	log    = system.Logger
+	config = system.Config
 )
 
 func getRobotsTxtCache(domainName string) string {

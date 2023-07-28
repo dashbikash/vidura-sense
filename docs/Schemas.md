@@ -1,32 +1,46 @@
 # Web Crawler Schemas
 
-## 1.0 HtmlContent
+## 1 HtmlPage
 
 ```json
 {
-    "id":"hashurl",
-    "url":"google.com",
-    "protocol":"https",
-    "raw_body":"Hello Crawler",
-    "metas":"",
-    "links":[
-        {
-            "title":"Link1",
-            "url":"http://url1"
-        },
-        {
-            "title":"Link1",
-            "url":"http://url1"
-        },
-        {
-            "title":"Link1",
-            "url":"http://url1"
-        }
+    "id": "hashurl",
+    "url": "google.com/search/about",
+    "scheme": "https",
+    "host":"google.com",
+    "title":"Site Title",
+    "meta": {
+        "charset": "utf-8",
+        "author":"bikash",
+        "description":"description",
+        "language":"en_IN",
+        "viewport":"width=device-width, initial-scale=1"
+    },
+    "body":"body content",
+    "links": ["link1","link2"
     ],
-    "last_updated":"2023-07-17T10:00:00",
-    "updated_by":{
-        "agent":"bot1",
-        "proxy":""
+    "updated_on": "2023-07-17T10:00:00",
+    "updated_by": {
+        "proxy": "",
+        "node_ip":""
+    }
+}
+```
+
+## 2 FeedItem
+
+``` json
+{
+    "url":"url",
+    "source_url":"url",
+    "title":"title",
+    "description":"description",
+    "published_on":"2023-07-17T10:00:00",
+    "updated_on": "2023-07-17T10:00:00",
+    "updated_by": {
+        "agent": "bot1",
+        "proxy": "",
+        "node_ip":""
     }
 }
 ```

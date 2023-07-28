@@ -12,19 +12,7 @@
         "viewport":"width=device-width, initial-scale=1"
     },
     "body":"body content",
-    "links": [
-        {
-            "title": "Link1",
-            "url": "http://url1"
-        },
-        {
-            "title": "Link1",
-            "url": "http://url1"
-        },
-        {
-            "title": "Link1",
-            "url": "http://url1"
-        }
+    "links": ["link1","link2"
     ],
     "updated_on": "2023-07-17T10:00:00",
     "updated_by": {

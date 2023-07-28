@@ -10,8 +10,8 @@ import (
 )
 
 var (
-	log    = system.GetLogger()
-	config = system.GetConfig()
+	log    = system.Logger
+	config = system.Config
 )
 
 type HtmlPage struct {
@@ -27,11 +27,8 @@ type HtmlPage struct {
 		Language    string `json:"language"`
 		Viewport    string `json:"viewport"`
 	} `json:"meta"`
-	Body  string `json:"body"`
-	Links []struct {
-		Title string `json:"title"`
-		URL   string `json:"url"`
-	} `json:"links"`
+	Body      string    `json:"body"`
+	Links     []string  `json:"links"`
 	UpdatedOn time.Time `json:"updated_on"`
 	UpdatedBy struct {
 		Proxy  string `json:"proxy"`
@@ -57,7 +54,7 @@ type FeedItem struct {
 func (htmlPage *HtmlPage) StoreHtml() {
 
 	if ds := mongostore.DefaultClient(); ds != nil {
-		result := ds.CreateOrReplaceOne(config.Data.Mongo.Collections.Htmlpages, htmlPage, bson.D{{"url", htmlPage.URL}})
+		result := ds.CreateOrReplaceOne(config.Data.Mongo.Collections.Htmlpages, htmlPage, bson.D{{Key: "url", Value: htmlPage.URL}})
 		log.Info(fmt.Sprintf("%d document updated.", result))
 	}
 }

@@ -10,13 +10,14 @@ application:
 server:
   mode: debug
   host: localhost
-  port: 8600
+  port: 8600 
 crawler: 
   user-agent: EthicalBot/0.1-dev/Email:bikashprakashdash@gmail.com
   proxies: 
     - http://test:test@localhost:3128
     - http://test:test@localhost:3129
     - http://test:test@localhost:3130
+    - http://test:test@localhost:3131
 data:
   mongo:
     mongo-url: mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
@@ -29,4 +30,4 @@ data:
     branches:
       robots-txt: 
         name: robots-txt
-        ttl: 1 #In hours
+        ttl: 24 #Hours

@@ -3,18 +3,20 @@ package system
 import (
 	"os"
 
+	"github.com/dashbikash/vidura-sense/internal/helper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/yaml.v3"
 )
 
-var config = GetConfig()
+var Config = getConfig()
+var Logger = getLogger()
 
-func GetLogger() *zap.Logger {
+func getLogger() *zap.Logger {
 
 	cfg := zap.NewDevelopmentConfig()
-	cfg.OutputPaths = config.Application.Log.Outputs
-	cfg.Level = config.Application.Log.Level
+	cfg.OutputPaths = Config.Application.Log.Outputs
+	cfg.Level = Config.Application.Log.Level
 
 	cfg.EncoderConfig.EncodeCaller = zapcore.ShortCallerEncoder
 	cfg.EncoderConfig.EncodeTime = zapcore.ISO8601TimeEncoder
@@ -27,17 +29,17 @@ func GetLogger() *zap.Logger {
 
 	return logger
 }
-func GetConfig() *Config {
+func getConfig() *SystemConfig {
 	configFile := "config/config.yml"
 	if len(os.Args) > 1 {
 		configFile = os.Args[1]
 	}
 
-	ymlText, err := ReadTextFile(configFile)
+	ymlText, err := helper.ReadTextFile(configFile)
 	if err != nil {
 		panic("Failed to read configuration file")
 	}
-	cf := &Config{}
+	cf := &SystemConfig{}
 	err = yaml.Unmarshal([]byte(ymlText), &cf)
 	if err != nil {
 		panic(err)
@@ -46,15 +48,7 @@ func GetConfig() *Config {
 	return cf
 }
 
-func ReadTextFile(filePath string) (string, error) {
-	content, err := os.ReadFile(filePath)
-	if err != nil {
-		return "", err
-	}
-	return string(content), nil
-}
-
-type Config struct {
+type SystemConfig struct {
 	Application struct {
 		Name    string
 		Version string

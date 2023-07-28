@@ -1,6 +1,7 @@
 package requestor
 
 import (
+	"fmt"
 	"net/http"
 	"strings"
 	"time"
@@ -13,7 +14,8 @@ import (
 )
 
 var (
-	log = system.GetLogger()
+	log    = system.Logger
+	config = system.Config
 )
 
 func RequestDemo1() {
@@ -25,20 +27,12 @@ func RequestDemo1() {
 		log.Error(e.Error())
 	})
 	crawler.OnHtml(func(d *goquery.Document) {
-		var links []struct {
-			Title string `json:"title"`
-			URL   string `json:"url"`
-		}
+		var links []string
+
 		d.Find("a").Each(func(_ int, s *goquery.Selection) {
 			href, ok := s.Attr("href")
 			if ok {
-				links = append(links, struct {
-					Title string `json:"title"`
-					URL   string `json:"url"`
-				}{
-					Title: s.Text(),
-					URL:   href,
-				})
+				links = append(links, href)
 			}
 
 		})
@@ -53,20 +47,27 @@ func RequestDemo1() {
 			UpdatedOn: time.Now().Local(),
 		}
 		html.StoreHtml()
+
 	})
 	crawler.OnXml(func(d *goquery.Document) {
 		log.Info(d.Find("rss").First().Text())
 	})
 
-	crawler.Run("https://quotes.toscrape.com", true)
-	// crawler.Run("https://quotes.toscrape.com/tag/love/", true)
-	// crawler.Run("https://quotes.toscrape.com/tag/life/", true)
-	// crawler.Run("https://quotes.toscrape.com/tag/books/", true)
-	// crawler.Run("http://rss.cnn.com/rss/edition.rss")
+	var stime, ftime time.Time
+
+	// stime = time.Now()
+	// crawler.RunManyAsync([]string{"https://quotes.toscrape.com", "https://www.metalsucks.net/"})
+	// ftime = time.Now()
+	// log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
+
+	stime = time.Now()
+	crawler.RunManyAsync([]string{"https://quotes.toscrape.com", "https://www.metalsucks.net/"})
+	ftime = time.Now()
+	log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
 }
 
 func RequestDemo2() {
-	crawler := spider.NewAsyncSpider()
+	crawler := spider.NewSpider()
 	crawler.OnSuccess(func(r *http.Response) {
 		log.Info(r.Status)
 	})
@@ -74,20 +75,12 @@ func RequestDemo2() {
 		log.Error(e.Error())
 	})
 	crawler.OnHtml(func(d *goquery.Document) {
-		var links []struct {
-			Title string `json:"title"`
-			URL   string `json:"url"`
-		}
+		var links []string
+
 		d.Find("a").Each(func(_ int, s *goquery.Selection) {
 			href, ok := s.Attr("href")
 			if ok {
-				links = append(links, struct {
-					Title string `json:"title"`
-					URL   string `json:"url"`
-				}{
-					Title: s.Text(),
-					URL:   href,
-				})
+				links = append(links, href)
 			}
 
 		})
@@ -102,12 +95,16 @@ func RequestDemo2() {
 			UpdatedOn: time.Now().Local(),
 		}
 		html.StoreHtml()
+
 	})
 	crawler.OnXml(func(d *goquery.Document) {
 		log.Info(d.Find("rss").First().Text())
 	})
 
-	crawler.Run([]string{"https://quotes.toscrape.com", "https://quotes.toscrape.com/tag/love/", "https://quotes.toscrape.com/tag/book/", "https://godoc.org", "https://www.packtpub.com", "https://kubernetes.io/"}, true)
-	// crawler.Run("https://quotes.toscrape.com/tag/books/", true)
-	// crawler.Run("http://rss.cnn.com/rss/edition.rss")
+	var stime, ftime time.Time
+
+	stime = time.Now()
+	crawler.RunManyAsync([]string{"https://quotes.toscrape.com", "https://www.metalsucks.net/"})
+	ftime = time.Now()
+	log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
 }

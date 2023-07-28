@@ -9,6 +9,7 @@
 | Version | Authors | Description   | Date       |
 | ------- | ------- | ------------- | ---------- |
 | 1.0     | Bikash  | Initial Draft | 2023-07-17 |
+| 1.1     | Bikash  | Project Structure Description| 2023-07-27 |
 
 ## 1 Introduction
 
@@ -21,7 +22,7 @@ The crawler will crawl the World Wide Web to gather info.
 
 This module will have the apis to call urls and fetch content.
 
-- Call [Frontier](#22-forntier) for urls to get content form World Wide Web.
+- Call [Frontier](#22-frontier) for urls to get content form World Wide Web.
 - Call multiple urls based upon their preference provided by frontier concurrently.
 - Pass web contents to the [Data Processor](#23-data-processor)
 
@@ -36,11 +37,11 @@ This contains the apis to feed urls for every trigger.
 This contains the apis to process data.
 
 - Get content form [Requestor](#21-requester).
-- Process it to schema refer to [HtmlContent](./Schemas.md#10-webcache)
+- Process it to schema refer to [HtmlPage](./Schemas.md#1-htmlpage) and [FeedItem](./Schemas.md#2-feeditem)
 - Filter content using Intelligence provider APIs.
 - After processing send it to Storage Provider
 
-### 2.4 Storage Provider
+### 2.4 Data Store
 
 This module contains apis to store data in databases or other storage.
 
@@ -57,3 +58,34 @@ This module contains the restapis for triggered jobs,metrics and web content sum
 ## 3 System Diagram
 
 ![image](diagrams/SystemDiagram.svg)
+
+## 4 Project Structure
+
+``` code
+
+.
+├── config                  Config files
+├── deployment              Deployment files
+├── docs                    Documentation
+│   └── diagrams            Documentation Diagrams
+├── internal                Project Internal Code
+│   ├── data            
+│   │   ├── entity          Data entities module
+│   │   └── processor       Data processors module
+│   ├── datastore
+│   │   ├── mongo-store     Mongodb storage module
+│   │   ├── natsio          Nats messaging module
+│   │   └── redis-store     Redis storage module
+│   ├── frontier        
+│   ├── helper              Helper utilities
+│   ├── requestor           Data requestors
+│   ├── restapi             Rest api module(Based on Gin)   
+│   │   └── handlers        Handlers for Gin
+│   ├── scheduler           Scheduler modules(Based on Gocron)
+│   ├── spider              Spider framework module
+│   │   └── robotstxt-util  robots.txt valication module
+│   └── system              Common system providers (logging,config)
+└── logs                    Logfile store directory
+
+
+```

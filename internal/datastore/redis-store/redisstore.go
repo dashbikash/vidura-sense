@@ -9,9 +9,10 @@ import (
 )
 
 var (
-	log    = system.GetLogger()
-	config = system.GetConfig()
-	ctx    = context.Background()
+	log    = system.Logger
+	config = system.Config
+
+	ctx = context.Background()
 )
 
 type RedisStore struct {

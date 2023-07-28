@@ -3,22 +3,28 @@ package main
 import (
 	"fmt"
 	"strings"
+	"sync"
 
 	"github.com/common-nighthawk/go-figure"
-	"github.com/dashbikash/vidura-sense/internal/requestor"
+	"github.com/dashbikash/vidura-sense/internal/scheduler"
 	"github.com/dashbikash/vidura-sense/internal/system"
 )
 
-var config = system.GetConfig()
+var (
+	log    = system.Logger
+	config = system.Config
+)
 
 func main() {
-	greet()
-	//scheduler.Start()
-	//restapi.Start()
-	//requestor.RequestDemo()
-	//mongo.QueryData()
+	//greet()
+	var wg sync.WaitGroup
+	wg.Add(1)
+	go scheduler.Start()
 
-	requestor.RequestDemo2()
+	wg.Wait()
+
+	//restapi.Start()
+
 }
 func greet() {
 	figure.NewFigure("Vidura Sense", "", true).Print()
