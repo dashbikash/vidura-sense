@@ -14,11 +14,6 @@ import (
 	"github.com/dashbikash/vidura-sense/internal/system"
 )
 
-var (
-	log    = system.Logger
-	config = system.Config
-)
-
 /*
  Spider interface for any spider
 */
@@ -78,15 +73,15 @@ func (spider *Spider) makeRequest(targetUrl string) {
 	}
 	req, err := http.NewRequest("GET", httpUrl.String(), nil)
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
 		return
 	}
-	req.Header.Set("User-Agent", config.Crawler.UserAgent)
+	req.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
 
 	resp, err := spider.httpClient.Do(req)
 
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
 		return
 	}
 	defer resp.Body.Close()
@@ -100,7 +95,7 @@ func (spider *Spider) makeRequest(targetUrl string) {
 			// Load the HTML document
 			doc, err := goquery.NewDocumentFromReader(resp.Body)
 			if err != nil {
-				log.Fatal(err.Error())
+				system.Log.Fatal(err.Error())
 			}
 			doc.Url = resp.Request.URL
 			if spider.handlerOnHtml != nil {
@@ -111,7 +106,7 @@ func (spider *Spider) makeRequest(targetUrl string) {
 			// Load the HTML document
 			doc, err := goquery.NewDocumentFromReader(resp.Body)
 			if err != nil {
-				log.Fatal(err.Error())
+				system.Log.Fatal(err.Error())
 			}
 			if spider.handlerOnXml != nil {
 				spider.handlerOnXml(doc)
@@ -195,16 +190,16 @@ func (spider *Spider) RandomProxy() *url.URL {
 	i := rand.Intn(len(spider.cfg.Proxies) - 1)
 
 	proxyURL, _ := url.Parse(spider.cfg.Proxies[i])
-	log.Debug(proxyURL.String())
+	system.Log.Debug(proxyURL.String())
 	return proxyURL
 }
 
 func (spider *Spider) RoundRobinProxy() *url.URL {
-	spider.cfg.Proxies = config.Crawler.Proxies
+	spider.cfg.Proxies = system.Config.Crawler.Proxies
 	idx := spider.ctx.Value("ProxyIndex").(int)
 
 	proxyURL, _ := url.Parse(spider.cfg.Proxies[idx])
-	log.Debug(proxyURL.String())
+	system.Log.Debug(proxyURL.String())
 	idx++
 	if idx >= len(spider.cfg.Proxies) {
 		idx = 0

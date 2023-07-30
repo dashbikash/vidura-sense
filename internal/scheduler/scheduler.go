@@ -9,19 +9,15 @@ import (
 	"github.com/go-co-op/gocron"
 )
 
-var (
-	log = system.Logger
-)
-
 func Start() {
 	s := gocron.NewScheduler(time.Local)
 	_, err := s.Every(20).Seconds().Do(func() {
 		var stime, ftime time.Time
 
 		stime = time.Now()
-		requestor.RequestDemo1()
+		requestor.RequestDemo2()
 		ftime = time.Now()
-		log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
+		system.Log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
 	})
 	if err != nil {
 		defer fmt.Println("Error Occured in Job")

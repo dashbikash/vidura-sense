@@ -2,7 +2,7 @@ application:
   name: Vidura Sense
   version: 0.1-dev
   log:
-    level: debug
+    level: info
     outputs: 
       - stdout
       - logs/app.log

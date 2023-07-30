@@ -72,20 +72,20 @@ This module contains the restapis for triggered jobs,metrics and web content sum
 │   ├── data            
 │   │   ├── entity          Data entities module
 │   │   └── processor       Data processors module
-│   ├── datastore
+│   ├── datastorage
 │   │   ├── mongo-store     Mongodb storage module
 │   │   ├── natsio          Nats messaging module
 │   │   └── redis-store     Redis storage module
-│   ├── frontier        
+│   ├── url-frontier        
 │   ├── helper              Helper utilities
 │   ├── requestor           Data requestors
-│   ├── restapi             Rest api module(Based on Gin)   
+│   ├── apiserver           Rest api module(Based on Gin)   
 │   │   └── handlers        Handlers for Gin
 │   ├── scheduler           Scheduler modules(Based on Gocron)
 │   ├── spider              Spider framework module
 │   │   └── robotstxt-util  robots.txt valication module
-│   └── system              Common system providers (logging,config)
-└── logs                    Logfile store directory
+│   └── system              Common system providers (logging,config etc)
+└── logs                    Log store directory
 
 
 ```

@@ -1,8 +1,9 @@
 package requestor
 
 import (
-	"fmt"
 	"net/http"
+	"net/url"
+	"regexp"
 	"strings"
 	"time"
 
@@ -13,30 +14,27 @@ import (
 	"github.com/dashbikash/vidura-sense/internal/system"
 )
 
-var (
-	log    = system.Logger
-	config = system.Config
-)
-
 func RequestDemo1() {
 	crawler := spider.NewSpider()
 	crawler.OnSuccess(func(r *http.Response) {
-		log.Info(r.Status)
+		system.Log.Info(r.Status + " " + r.Request.URL.String())
 	})
 	crawler.OnError(func(e error) {
-		log.Error(e.Error())
+		system.Log.Error(e.Error())
 	})
 	crawler.OnHtml(func(d *goquery.Document) {
-		var links []string
+		links := []string{}
 
 		d.Find("a").Each(func(_ int, s *goquery.Selection) {
 			href, ok := s.Attr("href")
 			if ok {
 				links = append(links, href)
 			}
+			if strings.HasPrefix(href, "http") {
+				go crawler.RunOne(href)
+			}
 
 		})
-		log.Info("Processing Html for " + d.Url.String())
 		html := &entity.HtmlPage{
 			URL:       strings.Trim(d.Url.String(), "/"),
 			Scheme:    d.Url.Scheme,
@@ -47,64 +45,62 @@ func RequestDemo1() {
 			UpdatedOn: time.Now().Local(),
 		}
 		html.StoreHtml()
+		//system.Log.Debug(html.UpdatedOn.Format("yyyy-MM-dd"))
 
 	})
 	crawler.OnXml(func(d *goquery.Document) {
-		log.Info(d.Find("rss").First().Text())
+		system.Log.Info(d.Find("rss").First().Text())
 	})
 
-	var stime, ftime time.Time
-
-	// stime = time.Now()
-	// crawler.RunManyAsync([]string{"https://quotes.toscrape.com", "https://www.metalsucks.net/"})
-	// ftime = time.Now()
-	// log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
-
-	stime = time.Now()
-	crawler.RunManyAsync([]string{"https://quotes.toscrape.com", "https://www.metalsucks.net/"})
-	ftime = time.Now()
-	log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
+	crawler.RunManyAsync([]string{"https://quotes.toscrape.com"})
 }
 
 func RequestDemo2() {
 	crawler := spider.NewSpider()
 	crawler.OnSuccess(func(r *http.Response) {
-		log.Info(r.Status)
+		system.Log.Info(r.Status + " " + r.Request.URL.String())
 	})
 	crawler.OnError(func(e error) {
-		log.Error(e.Error())
+		system.Log.Error(e.Error())
 	})
 	crawler.OnHtml(func(d *goquery.Document) {
-		var links []string
+		links := []string{}
 
 		d.Find("a").Each(func(_ int, s *goquery.Selection) {
 			href, ok := s.Attr("href")
 			if ok {
 				links = append(links, href)
 			}
+			go func() {
+				href = regexp.MustCompile(`(.+?)(\#[^.]*$|$)`).ReplaceAllString(href, "${1}")
+				purl, e := url.Parse(href)
+				if e != nil {
+					system.Log.Error(e.Error())
+				}
+				if purl.Scheme == "" || purl.Hostname() == d.Url.Hostname() {
+					system.Log.Info("Visiting " + "http://" + d.Url.Hostname() + href)
+					crawler.RunOne("http://" + d.Url.Hostname() + href)
+				}
+			}()
 
 		})
-		log.Info("Processing Html for " + d.Url.String())
-		html := &entity.HtmlPage{
-			URL:       strings.Trim(d.Url.String(), "/"),
-			Scheme:    d.Url.Scheme,
-			Host:      d.Url.Host,
-			Title:     d.Find("title").First().Text(),
-			Links:     links,
-			Body:      processor.NewTextProcessor(d.Find("body").Text()).SanitizeHtml().SanitizeText().String(),
-			UpdatedOn: time.Now().Local(),
-		}
-		html.StoreHtml()
+		go func() {
+			html := &entity.HtmlPage{
+				URL:       strings.Trim(d.Url.String(), "/"),
+				Scheme:    d.Url.Scheme,
+				Host:      d.Url.Host,
+				Title:     d.Find("title").First().Text(),
+				Links:     links,
+				Body:      processor.NewTextProcessor(d.Find("body").Text()).SanitizeHtml().SanitizeText().String(),
+				UpdatedOn: time.Now().Local(),
+			}
+			html.StoreHtml()
+		}()
 
 	})
 	crawler.OnXml(func(d *goquery.Document) {
-		log.Info(d.Find("rss").First().Text())
+		system.Log.Info(d.Find("rss").First().Text())
 	})
 
-	var stime, ftime time.Time
-
-	stime = time.Now()
-	crawler.RunManyAsync([]string{"https://quotes.toscrape.com", "https://www.metalsucks.net/"})
-	ftime = time.Now()
-	log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
+	crawler.RunManyAsync([]string{"https://quotes.toscrape.com"})
 }

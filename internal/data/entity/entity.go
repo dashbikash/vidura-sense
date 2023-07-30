@@ -4,18 +4,12 @@ import (
 	"fmt"
 	"time"
 
-	mongostore "github.com/dashbikash/vidura-sense/internal/datastore/mongo-store"
+	mongostore "github.com/dashbikash/vidura-sense/internal/datastorage/mongo-store"
 	"github.com/dashbikash/vidura-sense/internal/system"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-var (
-	log    = system.Logger
-	config = system.Config
-)
-
 type HtmlPage struct {
-	ID     string `json:"id"`
 	URL    string `json:"url"`
 	Scheme string `json:"scheme"`
 	Host   string `json:"host"`
@@ -29,11 +23,11 @@ type HtmlPage struct {
 	} `json:"meta"`
 	Body      string    `json:"body"`
 	Links     []string  `json:"links"`
-	UpdatedOn time.Time `json:"updated_on"`
+	UpdatedOn time.Time `json:"updated_on" bson:"updated_on"`
 	UpdatedBy struct {
 		Proxy  string `json:"proxy"`
-		NodeIP string `json:"node_ip"`
-	} `json:"updated_by"`
+		NodeIP string `json:"node_ip" bson:"node_ip"`
+	} `json:"updated_by" bson:"updated_by"`
 }
 
 type FeedItem struct {
@@ -54,7 +48,7 @@ type FeedItem struct {
 func (htmlPage *HtmlPage) StoreHtml() {
 
 	if ds := mongostore.DefaultClient(); ds != nil {
-		result := ds.CreateOrReplaceOne(config.Data.Mongo.Collections.Htmlpages, htmlPage, bson.D{{Key: "url", Value: htmlPage.URL}})
-		log.Info(fmt.Sprintf("%d document updated.", result))
+		result := ds.CreateOrReplaceOne(system.Config.Data.Mongo.Collections.Htmlpages, htmlPage, bson.D{{Key: "url", Value: htmlPage.URL}})
+		system.Log.Info(fmt.Sprintf("%d document updated.", result))
 	}
 }

@@ -1,0 +1,7 @@
+#! /bin/bash
+
+go build -o target/vidura-sense
+export GOMEMLIMIT=1024MiB
+echo GOMEMLIMIT:$GOMEMLIMIT
+
+./target/vidura-sense

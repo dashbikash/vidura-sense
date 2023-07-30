@@ -7,22 +7,17 @@ import (
 	"strings"
 	"time"
 
-	redisstore "github.com/dashbikash/vidura-sense/internal/datastore/redis-store"
+	redisstore "github.com/dashbikash/vidura-sense/internal/datastorage/redis-store"
 	"github.com/dashbikash/vidura-sense/internal/system"
 	"github.com/temoto/robotstxt"
 )
 
-var (
-	log    = system.Logger
-	config = system.Config
-)
-
 func getRobotsTxtCache(domainName string) string {
 
-	return redisstore.DefaultClient().GetString(config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, "")
+	return redisstore.DefaultClient().GetString(system.Config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, "")
 }
 func setRobotsTxtCache(domainName string, robotsTxt string) bool {
-	return redisstore.DefaultClient().SetString(config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, robotsTxt, time.Hour*time.Duration(config.Data.Redis.Branches.RobotsTxt.Ttl))
+	return redisstore.DefaultClient().SetString(system.Config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, robotsTxt, time.Hour*time.Duration(system.Config.Data.Redis.Branches.RobotsTxt.Ttl))
 }
 
 func fetchRobotsTxtFromServer(hostUrl string) string {
@@ -31,17 +26,19 @@ func fetchRobotsTxtFromServer(hostUrl string) string {
 
 	req, err := http.NewRequest("GET", "http://"+hostUrl+"/robots.txt", nil)
 	if err != nil {
-		log.Fatal(err.Error())
+		system.Log.Fatal(err.Error())
 	}
-	req.Header.Set("User-Agent", config.Crawler.UserAgent)
+	req.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
 
 	resp, err := client.Do(req)
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
+		return ""
 	}
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
+		return ""
 	}
 	if resp.StatusCode == 200 {
 		robotsVal := string(body)
@@ -55,9 +52,9 @@ func fetchRobotsTxtFromServer(hostUrl string) string {
 func GetRobotsTxtForUrl(targetUrl string) string {
 	robotsTxt := ""
 	urlParsed, err := url.Parse(targetUrl)
-	log.Debug("Getting Robotstxt: " + urlParsed.Host)
+	system.Log.Debug("Getting Robotstxt: " + urlParsed.Host)
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
 	} else {
 		urlParsed.Host = strings.TrimPrefix(urlParsed.Host, "www.")
 		robotsTxt = getRobotsTxtCache(urlParsed.Host)
@@ -75,16 +72,16 @@ func IsAllowedUrl(targetUrl string) bool {
 	robotsTxtRules := GetRobotsTxtForUrl(targetUrl)
 	robots, err := robotstxt.FromString(robotsTxtRules)
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
 	}
 
 	urlParsed, err := url.Parse(targetUrl)
-	log.Debug("Getting Robotstxt for:" + urlParsed.Host)
+	system.Log.Debug("Getting Robotstxt for:" + urlParsed.Host)
 	if err != nil {
-		log.Error(err.Error())
+		system.Log.Error(err.Error())
 	}
 
-	allow := robots.TestAgent(urlParsed.Path, config.Crawler.UserAgent)
+	allow := robots.TestAgent(urlParsed.Path, system.Config.Crawler.UserAgent)
 
 	return allow
 }

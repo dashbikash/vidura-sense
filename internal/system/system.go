@@ -1,19 +1,28 @@
 package system
 
 import (
+	"fmt"
 	"os"
+	"strings"
 
+	"github.com/common-nighthawk/go-figure"
 	"github.com/dashbikash/vidura-sense/internal/helper"
 	"go.uber.org/zap"
 	"go.uber.org/zap/zapcore"
 	"gopkg.in/yaml.v3"
 )
 
-var Config = getConfig()
-var Logger = getLogger()
+var (
+	Config *SystemConfig
+	Log    *zap.Logger
+)
+
+func init() {
+	Config = getConfig()
+	Log = getLogger()
+}
 
 func getLogger() *zap.Logger {
-
 	cfg := zap.NewDevelopmentConfig()
 	cfg.OutputPaths = Config.Application.Log.Outputs
 	cfg.Level = Config.Application.Log.Level
@@ -86,4 +95,13 @@ type SystemConfig struct {
 			}
 		}
 	}
+}
+
+func Setup() {
+	os.Setenv("GOMEMLIMIT", "1024MiB")
+}
+
+func GreetMessage() {
+	figure.NewFigure("Vidura Sense", "", true).Print()
+	fmt.Println(strings.Repeat("= ", 42) + Config.Application.Version + "\n")
 }

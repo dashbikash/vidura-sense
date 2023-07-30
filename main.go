@@ -2,31 +2,32 @@ package main
 
 import (
 	"fmt"
-	"strings"
-	"sync"
+	"os"
+	"runtime/pprof"
 
-	"github.com/common-nighthawk/go-figure"
-	"github.com/dashbikash/vidura-sense/internal/scheduler"
+	"github.com/dashbikash/vidura-sense/internal/apiserver"
+	"github.com/dashbikash/vidura-sense/internal/requestor"
 	"github.com/dashbikash/vidura-sense/internal/system"
 )
 
-var (
-	log    = system.Logger
-	config = system.Config
-)
-
 func main() {
-	//greet()
-	var wg sync.WaitGroup
-	wg.Add(1)
-	go scheduler.Start()
+	system.Setup()
+	system.GreetMessage()
 
-	wg.Wait()
+	// Start profiling
+	f, err := os.Create("target/myprogram.prof")
+	if err != nil {
 
-	//restapi.Start()
+		fmt.Println(err)
+		return
 
-}
-func greet() {
-	figure.NewFigure("Vidura Sense", "", true).Print()
-	fmt.Println(strings.Repeat("= ", 42) + config.Application.Version + "\n")
+	}
+	pprof.StartCPUProfile(f)
+	defer pprof.StopCPUProfile()
+	//scheduler.Start()
+	requestor.RequestDemo2()
+	apiserver.Start()
+
+	//requestor.RequestDemo1()
+
 }
