@@ -3,5 +3,5 @@ package urlfrontier
 import "fmt"
 
 func GetUrls() {
-	fmt.Println("Hello")
+	fmt.Println("To be done")
 }

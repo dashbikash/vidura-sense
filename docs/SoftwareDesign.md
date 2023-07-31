@@ -2,7 +2,8 @@
 
 ## Table of Contents
 
-[TOC]
+* TOC
+{:toc}
 
 ## Rivision History
 
@@ -18,48 +19,56 @@ The crawler will crawl the World Wide Web to gather info.
 
 ## 2 Requirements
 
-### 2.1 Requester
+### 2.1 Spider
+ 
+ Spider often shortened to crawler, is an Internet bot that systematically browses the World Wide Web and that is typically operated by search engines for the purpose of Web indexing.
+
+### 2.2 Requester
 
 This module will have the apis to call urls and fetch content.
 
-- Call [Frontier](#22-frontier) for urls to get content form World Wide Web.
-- Call multiple urls based upon their preference provided by frontier concurrently.
-- Pass web contents to the [Data Processor](#23-data-processor)
+* Call [Frontier](#23-url-frontier) for urls to get content form World Wide Web.
+* Call multiple urls based upon their preference provided by frontier concurrently.
+* Pass web contents to the [Data Processor](#24-data-processor)
 
-### 2.2 Frontier
+### 2.3 URL Frontier
 
 This contains the apis to feed urls for every trigger.
 
-- Fetch urls from database whose content is 3(get it from configuration "update_interval") days old or more (ie current_date - last_updated >=3 days) and return as array.
+* Fetch urls from database whose content is 3(get it from configuration "update_interval") days old or more (ie current_date - last_updated >=3 days) and return as array.
 
-### 2.3 Data Processor
+### 2.4 Data Processor
 
 This contains the apis to process data.
 
-- Get content form [Requestor](#21-requester).
-- Process it to schema refer to [HtmlPage](./Schemas.md#1-htmlpage) and [FeedItem](./Schemas.md#2-feeditem)
-- Filter content using Intelligence provider APIs.
-- After processing send it to Storage Provider
+* Get content form [Requestor](#22-requester).
+* Process it to schema refer to [HtmlPage](./Schemas.md#1-htmlpage) and [FeedItem](./Schemas.md#2-feeditem)
+* Filter content using Intelligence provider APIs.
+* After processing send it to Storage Provider
 
-### 2.4 Data Store
+### 2.5 Data Storage
 
 This module contains apis to store data in databases or other storage.
 
-- Store content in database received from [Data Processor](#23-data-processor)
+* Store content in database received from [Data Processor](#24-data-processor)
 
-### 2.5 Scheduler
+### 2.6 Scheduler
 
-This module triggers [Requester](#21-requester) on regular intervals.
+* This module triggers [Requester](#22-requester) on regular intervals.
 
-### 2.6 REST Apis
+### 2.7 Api Server
 
-This module contains the restapis for triggered jobs,metrics and web content summary.
+* This module contains the restapis for triggered jobs,metrics and web content summary.
 
 ## 3 System Diagram
 
 ![image](diagrams/SystemDiagram.svg)
 
-## 4 Project Structure
+## 4 Sequence Diagrams
+
+![image](diagrams/SystemDiagram.svg)
+
+## 5 Project Structure
 
 ``` code
 
@@ -78,7 +87,7 @@ This module contains the restapis for triggered jobs,metrics and web content sum
 │   │   └── redis-store     Redis storage module
 │   ├── url-frontier        
 │   ├── helper              Helper utilities
-│   ├── requestor           Data requestors
+│   ├── requester           Data requestors
 │   ├── apiserver           Rest api module(Based on Gin)   
 │   │   └── handlers        Handlers for Gin
 │   ├── scheduler           Scheduler modules(Based on Gocron)

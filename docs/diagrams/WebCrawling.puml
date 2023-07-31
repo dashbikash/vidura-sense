@@ -1,0 +1,30 @@
+@startuml "Web Crawling"
+title Web Crawling Sequence
+actor       User       as User
+participant Api as API
+participant Scheduler as Scheduler
+participant Requester as Requester
+participant Frontier as Frontier
+participant Spider as Spider
+collections Web as Web
+Participant    DataProcessor    as DataProcessor
+Participant    DataStorage    as DataStorage
+database    Database    as Database
+
+User -> API: 1.Api Call
+API -> Requester: 2.Trigger Request
+Scheduler -> Requester :2.Trigger Request
+Requester -> Frontier :3.Request Seed Urls
+Frontier -> DataStorage :4.Get Urls From Datastorage
+DataStorage -> Frontier :5. Query Urls From Database
+Frontier -> Requester :6.Urls
+Requester -> Spider :7.Call Spider
+Spider -> Web :8.Fetch data from urls
+
+Web -> Spider :9.Web Data
+Spider -> Requester :10.Web Data 
+Requester -> DataProcessor :11.Processed Data
+DataProcessor -> DataStorage :12.Call to store data
+DataStorage -> Database :13.Store data to database
+
+@enduml

@@ -29,6 +29,7 @@ type ISpider interface {
 	OnError(func(error))
 	OnHtml(func(*goquery.Document))
 	OnXml(func(*goquery.Document))
+	AddUrlFilter(string, func(string) bool)
 }
 
 /*
@@ -39,6 +40,7 @@ type Spider struct {
 	httpClient       *http.Client
 	cfg              *SpiderConfig
 	ctx              context.Context
+	urlFilters       map[string]func(string) bool
 	handlerOnSuccess func(*http.Response)
 	handlerOnError   func(error)
 	handlerOnHtml    func(*goquery.Document)
@@ -48,24 +50,29 @@ type Spider struct {
 func NewSpider() *Spider {
 
 	c := context.WithValue(context.TODO(), "ProxyIndex", 0)
-	spider := &Spider{httpClient: &http.Client{}, cfg: DefaultConfig(), ctx: c}
+	spider := &Spider{httpClient: &http.Client{},
+		cfg:        DefaultConfig(),
+		ctx:        c,
+		urlFilters: make(map[string]func(string) bool)}
+
+	if !spider.cfg.IgnoreRobotTxt {
+		spider.AddUrlFilter("RobotTxtValidation", func(targetUrl string) bool {
+			return robotstxtutil.IsAllowedUrl(targetUrl)
+		})
+	}
 
 	return spider
 }
 func NewWithConfig(cfg *SpiderConfig) *Spider {
 
-	spider := &Spider{httpClient: &http.Client{}, cfg: cfg}
+	spider := &Spider{httpClient: &http.Client{},
+		cfg:        cfg,
+		urlFilters: make(map[string]func(string) bool)}
 	return spider
 }
 
 func (spider *Spider) makeRequest(targetUrl string) {
 
-	if !spider.cfg.IgnoreRobotTxt {
-		if allowed := robotstxtutil.IsAllowedUrl(targetUrl); !allowed {
-			spider.handlerOnError(errors.New("not allowed: robots.txt validation failed"))
-			return
-		}
-	}
 	httpUrl, err := url.Parse(targetUrl)
 	if err != nil {
 		spider.handlerOnError(errors.New("invalid url"))
@@ -135,54 +142,80 @@ func (spider *Spider) OnXml(fn func(*goquery.Document)) {
 	spider.handlerOnXml = fn
 }
 
+func (spider *Spider) AddUrlFilter(filterId string, fn func(targetUrl string) bool) {
+	spider.urlFilters[filterId] = fn
+}
+func (spider *Spider) applyUrlFilters(targetUrl string) bool {
+	for filterId, filterFn := range spider.urlFilters {
+
+		if !filterFn(targetUrl) {
+			system.Log.Info("Url filter failed at " + filterId)
+			return false
+		}
+	}
+	return true
+}
+
 func (spider *Spider) RunMany(targetUrls []string) {
 
 	for _, t := range targetUrls {
-		spider.makeRequest(t)
+		if spider.applyUrlFilters(t) {
+			spider.makeRequest(t)
+		}
 	}
 }
-func (spider *Spider) RunManyAsync(targetUrls []string) {
+func (spider *Spider) RunManyAsyncAwait(targetUrls []string) {
 	var waitGroup sync.WaitGroup
 	for _, t := range targetUrls {
 		waitGroup.Add(1)
 		t := t
 		go func() {
 			defer waitGroup.Done()
-			spider.makeRequest(t)
+			if spider.applyUrlFilters(t) {
+				spider.makeRequest(t)
+			}
 		}()
 	}
 	// close the channel in the background
 	waitGroup.Wait()
 }
-func (spider *Spider) RunManyAsyncAwait(targetUrls []string) {
+func (spider *Spider) RunManyAsync(targetUrls []string) {
 
 	for _, t := range targetUrls {
 		t := t
 		go func() {
-			spider.makeRequest(t)
+			if spider.applyUrlFilters(t) {
+				spider.makeRequest(t)
+			}
 		}()
 	}
 }
 
 func (spider *Spider) RunOne(targetUrl string) {
 
-	spider.makeRequest(targetUrl)
+	if spider.applyUrlFilters(targetUrl) {
+		spider.makeRequest(targetUrl)
+	}
 }
-func (spider *Spider) RunOneAsync(targetUrl string) {
+func (spider *Spider) RunOneAsyncAwait(targetUrl string) {
 	var waitGroup sync.WaitGroup
 	waitGroup.Add(1)
 
 	go func() {
 		defer waitGroup.Done()
-		spider.makeRequest(targetUrl)
+		if spider.applyUrlFilters(targetUrl) {
+			spider.makeRequest(targetUrl)
+		}
 	}()
 
 	waitGroup.Wait()
 }
-func (spider *Spider) RunOneAsyncAwait(targetUrl string) {
+func (spider *Spider) RunOneAsync(targetUrl string) {
 
 	go func() {
-		spider.makeRequest(targetUrl)
+		if spider.applyUrlFilters(targetUrl) {
+			spider.makeRequest(targetUrl)
+		}
 	}()
 }
 

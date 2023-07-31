@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/dashbikash/vidura-sense/internal/requestor"
+	"github.com/dashbikash/vidura-sense/internal/requester"
 	"github.com/dashbikash/vidura-sense/internal/system"
 	"github.com/go-co-op/gocron"
 )
@@ -15,7 +15,7 @@ func Start() {
 		var stime, ftime time.Time
 
 		stime = time.Now()
-		requestor.RequestDemo2()
+		requester.SimpleRequest()
 		ftime = time.Now()
 		system.Log.Info(fmt.Sprintf("Time elapsed %f", ftime.Sub(stime).Seconds()))
 	})

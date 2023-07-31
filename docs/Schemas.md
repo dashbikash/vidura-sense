@@ -4,7 +4,6 @@
 
 ```json
 {
-    "id": "hashurl",
     "url": "google.com/search/about",
     "scheme": "https",
     "host":"google.com",
