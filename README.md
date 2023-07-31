@@ -4,5 +4,5 @@ Intent based web crawler.
 
 Interested to contribute. Please Refer,
 
-- [Softare Requirements](docs/SoftwareRequirements.md)
-- [Softare Design](docs/SoftwareDesign.md)
+- [Software Requirements](docs/SoftwareRequirements.md)
+- [Software Design](docs/SoftwareDesign.md)
