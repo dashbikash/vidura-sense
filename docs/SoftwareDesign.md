@@ -66,7 +66,7 @@ This module contains apis to store data in databases or other storage.
 
 ## 4 Sequence Diagrams
 
-![image](diagrams/SystemDiagram.svg)
+![image](diagrams/WebCrawlingSequence.svg)
 
 ## 5 Project Structure
 
