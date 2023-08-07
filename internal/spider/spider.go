@@ -78,20 +78,25 @@ func (spider *Spider) makeRequest(targetUrl string) {
 		spider.handlerOnError(errors.New("invalid url"))
 		return
 	}
-	req, err := http.NewRequest("GET", httpUrl.String(), nil)
+	httpReq, err := http.NewRequest("GET", httpUrl.String(), nil)
 	if err != nil {
 		system.Log.Error(err.Error())
 		return
 	}
-	req.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
+	httpReq.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
 
-	resp, err := spider.httpClient.Do(req)
+	resp, err := spider.httpClient.Do(httpReq)
 
 	if err != nil {
 		system.Log.Error(err.Error())
 		return
 	}
-	defer resp.Body.Close()
+	defer func() {
+		resp.Body.Close()
+		resp = nil
+		httpReq = nil
+		httpUrl = nil
+	}()
 
 	if resp.StatusCode == 200 {
 		if spider.handlerOnSuccess != nil {
@@ -101,6 +106,9 @@ func (spider *Spider) makeRequest(targetUrl string) {
 		if ok := strings.HasPrefix(resp.Header.Get("Content-Type"), "text/html"); ok {
 			// Load the HTML document
 			doc, err := goquery.NewDocumentFromReader(resp.Body)
+			defer func() {
+				doc = nil
+			}()
 			if err != nil {
 				system.Log.Fatal(err.Error())
 			}
@@ -112,6 +120,9 @@ func (spider *Spider) makeRequest(targetUrl string) {
 		} else if ok := strings.HasPrefix(resp.Header.Get("Content-Type"), "text/xml"); ok {
 			// Load the HTML document
 			doc, err := goquery.NewDocumentFromReader(resp.Body)
+			defer func() {
+				doc = nil
+			}()
 			if err != nil {
 				system.Log.Fatal(err.Error())
 			}

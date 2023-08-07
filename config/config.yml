@@ -1,8 +1,8 @@
 application:
-  name: Vidura Sense
+  id: InstanceA
   version: 0.1-dev
   log:
-    level: info
+    level: debug
     outputs: 
       - stdout
       - logs/app.log
@@ -12,12 +12,9 @@ server:
   host: localhost
   port: 8600 
 crawler: 
-  user-agent: EthicalBot/0.1-dev/Email:bikashprakashdash@gmail.com
+  user-agent: EthicalBot(RnD Purpose)/bikashprakashdash@gmail.com
   proxies: 
     - http://test:test@localhost:3128
-    - http://test:test@localhost:3129
-    - http://test:test@localhost:3130
-    - http://test:test@localhost:3131
 data:
   mongo:
     mongo-url: mongodb://root:root@localhost:27017/vidura-iras?authSource=admin
@@ -31,3 +28,7 @@ data:
       robots-txt: 
         name: robots-txt
         ttl: 24 #Hours
+  natsio:
+    nats-url: redis://localhost:6379/0
+    kv-buckets:
+      robots-txt: robots-txt

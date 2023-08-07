@@ -10,28 +10,9 @@ import (
 
 var Config *SystemConfig
 
-func getConfig() *SystemConfig {
-	configFile := "config/config.yml"
-	if len(os.Args) > 1 {
-		configFile = os.Args[1]
-	}
-
-	ymlText, err := helper.ReadTextFile(configFile)
-	if err != nil {
-		panic("Failed to read configuration file")
-	}
-	cf := &SystemConfig{}
-	err = yaml.Unmarshal([]byte(ymlText), &cf)
-	if err != nil {
-		panic(err)
-	}
-
-	return cf
-}
-
 type SystemConfig struct {
 	Application struct {
-		Name    string
+		ID      string
 		Version string
 		Log     struct {
 			Level   zap.AtomicLevel
@@ -66,5 +47,29 @@ type SystemConfig struct {
 				} `yaml:"robots-txt"`
 			}
 		}
+		NatsIO struct {
+			NatsUrl   string `yaml:"nats-url"`
+			KvBuckets struct {
+				RobotsTxt string `yaml:"robots-txt"`
+			} `yaml:"kv-buckets"`
+		}
+	}
+}
+
+func setConfig() {
+
+	configFile := "config/config.yml"
+	if len(os.Args) > 1 {
+		configFile = os.Args[1]
+	}
+
+	ymlText, err := helper.ReadTextFile(configFile)
+	if err != nil {
+		panic("Failed to read configuration file")
+	}
+	Config = &SystemConfig{}
+	err = yaml.Unmarshal([]byte(ymlText), &Config)
+	if err != nil {
+		panic(err)
 	}
 }

@@ -1,26 +1,27 @@
 package main
 
 import (
-	"fmt"
-	"os"
 	"runtime/pprof"
 
-	"github.com/dashbikash/vidura-sense/internal/requester"
+	"github.com/dashbikash/vidura-sense/internal/apiserver"
 )
+
+var threadProfile = pprof.Lookup("threadcreate")
 
 func main() {
 
 	// Start profiling
-	f, err := os.Create("target/myprogram.prof")
-	if err != nil {
+	// f, err := os.Create("target/myprogram.prof")
+	// if err != nil {
 
-		fmt.Println(err)
-		return
+	// 	fmt.Println(err)
+	// 	return
 
-	}
-	pprof.StartCPUProfile(f)
-	defer pprof.StopCPUProfile()
+	// }
+	// pprof.StartCPUProfile(f)
+	// defer pprof.StopCPUProfile()
+	// system.Log.Info(fmt.Sprintf("threads in starting: %d\n", threadProfile.Count()))
 
-	requester.SimpleRequest()
-
+	// fmt.Printf(("threads after LookupHost: %d\n"), threadProfile.Count())
+	apiserver.Start()
 }

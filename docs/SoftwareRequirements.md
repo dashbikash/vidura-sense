@@ -1,6 +1,4 @@
-# Crawler Requirements Document 
-
-
+# Crawler Requirements Document
 
 ## 1.0 Introduction
 

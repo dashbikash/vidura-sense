@@ -9,7 +9,7 @@ import (
 )
 
 func init() {
-	Config = getConfig()
+	setConfig()
 	Log = getLogger()
 	setEnvironment()
 	greetMessage()

@@ -5,26 +5,25 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
-	"time"
 
-	redisstore "github.com/dashbikash/vidura-sense/internal/datastorage/redis-store"
+	"github.com/dashbikash/vidura-sense/internal/datastorage/natsio"
 	"github.com/dashbikash/vidura-sense/internal/system"
 	"github.com/temoto/robotstxt"
 )
 
 func getRobotsTxtCache(domainName string) string {
 
-	return redisstore.DefaultClient().GetString(system.Config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, "")
+	return natsio.KVGet(system.Config.Data.NatsIO.KvBuckets.RobotsTxt, domainName)
 }
-func setRobotsTxtCache(domainName string, robotsTxt string) bool {
-	return redisstore.DefaultClient().SetString(system.Config.Data.Redis.Branches.RobotsTxt.Name+":"+domainName, robotsTxt, time.Hour*time.Duration(system.Config.Data.Redis.Branches.RobotsTxt.Ttl))
+func setRobotsTxtCache(domainName string, robotsTxt string) {
+	natsio.KVPut(system.Config.Data.NatsIO.KvBuckets.RobotsTxt, domainName, robotsTxt)
 }
 
-func fetchRobotsTxtFromServer(hostUrl string) string {
+func fetchRobotsTxtFromServer(scheme string, hostUrl string) string {
 
 	client := &http.Client{}
 
-	req, err := http.NewRequest("GET", "http://"+hostUrl+"/robots.txt", nil)
+	req, err := http.NewRequest("GET", scheme+"://"+hostUrl+"/robots.txt", nil)
 	if err != nil {
 		system.Log.Fatal(err.Error())
 	}
@@ -40,10 +39,18 @@ func fetchRobotsTxtFromServer(hostUrl string) string {
 		system.Log.Error(err.Error())
 		return ""
 	}
-	if resp.StatusCode == 200 {
+	defer func() {
+		resp.Body.Close()
+		req = nil
+		client = nil
+		err = nil
+	}()
+	if resp.StatusCode == http.StatusOK {
 		robotsVal := string(body)
 
 		return robotsVal
+	} else if resp.StatusCode == http.StatusNotFound {
+		return "na"
 	}
 	return ""
 
@@ -59,7 +66,7 @@ func GetRobotsTxtForUrl(targetUrl string) string {
 		urlParsed.Host = strings.TrimPrefix(urlParsed.Host, "www.")
 		robotsTxt = getRobotsTxtCache(urlParsed.Host)
 		if len(robotsTxt) < 1 {
-			robotsTxt = fetchRobotsTxtFromServer(urlParsed.Host)
+			robotsTxt = fetchRobotsTxtFromServer(urlParsed.Scheme, urlParsed.Host)
 			setRobotsTxtCache(urlParsed.Host, robotsTxt)
 		}
 	}
@@ -70,6 +77,9 @@ func GetRobotsTxtForUrl(targetUrl string) string {
 
 func IsAllowedUrl(targetUrl string) bool {
 	robotsTxtRules := GetRobotsTxtForUrl(targetUrl)
+	if robotsTxtRules == "na" {
+		return true
+	}
 	robots, err := robotstxt.FromString(robotsTxtRules)
 	if err != nil {
 		system.Log.Error(err.Error())
