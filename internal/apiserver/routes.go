@@ -7,7 +7,8 @@ import (
 func setRoutes() {
 
 	router.GET("/", apihandler.Index)
-	router.POST("/seedurl", apihandler.SeedUrl)
-	router.POST("/crawl", apihandler.Crawl)
+	router.POST("/seedurl", apihandler.PostSeedUrl)
+	router.POST("/crawl", apihandler.PostCrawl)
+	router.POST("/crawlurl", apihandler.PostCrawlUrl)
 
 }

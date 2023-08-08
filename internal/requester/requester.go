@@ -57,13 +57,8 @@ func SimpleRequest(targetUrl []string) {
 	crawler.OnXml(func(d *goquery.Document) {
 		system.Log.Info(d.Find("rss").First().Text())
 	})
-	// crawler.AddUrlFilter("TimeIntervalValidation", func(targetUrl string) bool {
-	// 	urlMeta := &entity.UrlMeta{}
-	// 	entity.GetUrlMeta("quotes.toscrape.com", urlMeta)
-	// 	return time.Since(urlMeta.LastUpdated).Minutes() > 60
-	// })
 
-	crawler.RunMany(targetUrl)
+	crawler.RunManyAsync(targetUrl)
 }
 
 func RecurssiveRequest() {

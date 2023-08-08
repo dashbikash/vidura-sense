@@ -2,6 +2,8 @@ package apihandler
 
 import (
 	"fmt"
+	"net/http"
+	"strconv"
 
 	"github.com/dashbikash/vidura-sense/internal/data/entity"
 	"github.com/dashbikash/vidura-sense/internal/requester"
@@ -12,7 +14,7 @@ import (
 func Index(ctx *gin.Context) {
 	ctx.String(200, "Welcome to Vidura Sense")
 }
-func SeedUrl(ctx *gin.Context) {
+func PostSeedUrl(ctx *gin.Context) {
 	var blankPages []interface{}
 	var urls []string
 	// If `GET`, only `Form` binding engine (`query`) used.
@@ -27,8 +29,28 @@ func SeedUrl(ctx *gin.Context) {
 
 	ctx.String(200, fmt.Sprintf("%d urls seeded.", len(blankPages)))
 }
-func Crawl(ctx *gin.Context) {
-	urls := urlfrontier.GetNewUrls(30)
+func PostCrawl(ctx *gin.Context) {
+
+	limit, err := strconv.ParseInt(ctx.DefaultQuery("lim", "30"), 0, 0)
+	if err != nil {
+		ctx.String(http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	urls := urlfrontier.GetNewUrls(int(limit))
+	requester.SimpleRequest(urls)
+	ctx.String(200, "Done")
+}
+
+func PostCrawlUrl(ctx *gin.Context) {
+
+	var urls []string
+
+	if err := ctx.ShouldBind(&urls); err != nil {
+		ctx.String(http.StatusInternalServerError, err.Error())
+		return
+	}
+
 	requester.SimpleRequest(urls)
 	ctx.String(200, "Done")
 }

@@ -5,7 +5,6 @@ application:
     level: debug
     outputs: 
       - stdout
-      - logs/app.log
 
 server:
   mode: debug
