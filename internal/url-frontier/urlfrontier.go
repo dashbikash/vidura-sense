@@ -2,6 +2,8 @@ package urlfrontier
 
 import (
 	"context"
+	"fmt"
+	"time"
 
 	mongostore "github.com/dashbikash/vidura-sense/internal/datastorage/mongo-store"
 	"github.com/dashbikash/vidura-sense/internal/system"
@@ -10,15 +12,21 @@ import (
 )
 
 func GetNewUrls(limit int) []string {
+	pipeline := mongo.Pipeline{
+		{{Key: "$match", Value: bson.M{"hash": nil}}},
+		{{Key: "$match", Value: bson.M{"$or": bson.A{
+			bson.M{"lock_expiry": nil},
+			bson.M{"lock_expiry": bson.M{"$lt": time.Now()}},
+		}}}},
+		{{Key: "$sort", Value: bson.M{"updated_on": 1}}},
+		{{Key: "$project", Value: bson.M{"_id": 0, "url": 1}}},
+		{{Key: "$limit", Value: limit}},
+	}
 
 	var result []struct{ URL string }
+
 	cursor, err := mongostore.DefaultClient().Database().Collection(system.Config.Data.Mongo.Collections.Htmlpages).Aggregate(context.TODO(),
-		mongo.Pipeline{
-			{{Key: "$match", Value: bson.D{{Key: "body", Value: nil}}}},
-			{{Key: "$sort", Value: bson.D{{Key: "updated_on", Value: 1}}}},
-			{{Key: "$project", Value: bson.D{{Key: "_id", Value: 0}, {Key: "url", Value: 1}}}},
-			{{Key: "$limit", Value: limit}},
-		})
+		pipeline)
 	if err != nil {
 		system.Log.Error(err.Error())
 		return nil
@@ -32,6 +40,7 @@ func GetNewUrls(limit int) []string {
 	for _, v := range result {
 		urls = append(urls, v.URL)
 	}
+	fmt.Println(urls)
 	return urls
 
 }

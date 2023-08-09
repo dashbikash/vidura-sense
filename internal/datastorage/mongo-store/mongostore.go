@@ -15,6 +15,7 @@ var (
 type MongoStore struct {
 	mongoClient *mongo.Client
 	database    *mongo.Database
+	collection  string
 }
 
 func DefaultClient() *MongoStore {
@@ -27,6 +28,7 @@ func DefaultClient() *MongoStore {
 
 	return &MongoStore{mongoClient: client, database: client.Database(system.Config.Data.Mongo.Database)}
 }
+
 func DefaultClientWithDatabase(db string) *MongoStore {
 	system.Log.Debug("Connecting to Mongodb " + system.Config.Data.Mongo.MongoUrl)
 	client, err := mongo.Connect(ctx, options.Client().ApplyURI(system.Config.Data.Mongo.MongoUrl))
@@ -42,10 +44,15 @@ func (ds *MongoStore) Database() *mongo.Database {
 	return ds.database
 }
 
-func (ds *MongoStore) CreateOrReplaceOne(collection string, data interface{}, filter interface{}) int64 {
+func (ds *MongoStore) Collection(collection string) *MongoStore {
+	ds.collection = collection
+	return ds
+}
+
+func (ds *MongoStore) CreateOrReplaceOne(data interface{}, filter interface{}) int64 {
 	defer ds.dispose()
-	opts := options.Replace().SetUpsert(true)
-	result, err := ds.database.Collection(collection).ReplaceOne(ctx, filter, data, opts)
+
+	result, err := ds.database.Collection(ds.collection).ReplaceOne(ctx, filter, data, options.Replace().SetUpsert(true))
 	if err != nil {
 		system.Log.Error(err.Error())
 		return 0
@@ -54,19 +61,27 @@ func (ds *MongoStore) CreateOrReplaceOne(collection string, data interface{}, fi
 	return result.UpsertedCount
 }
 
-func (ds *MongoStore) InsertOrIgnore(collection string, data []interface{}) int {
+func (ds *MongoStore) InsertOrIgnore(data []interface{}) int {
 	defer ds.dispose()
 	opts := &options.InsertManyOptions{}
 	opts.SetOrdered(false)
 
-	result, _ := ds.database.Collection(collection).InsertMany(ctx, data, opts)
+	result, _ := ds.database.Collection(ds.collection).InsertMany(ctx, data, opts)
 
 	return len(result.InsertedIDs)
 }
-
-func (ds *MongoStore) Aggregate(collection string, pipeline interface{}, dtype *[]interface{}) {
+func (ds *MongoStore) FindOneAndUpdate(update interface{}, filter interface{}) int {
 	defer ds.dispose()
-	cursor, err := ds.database.Collection(collection).Aggregate(ctx, pipeline)
+	result := ds.database.Collection(ds.collection).FindOneAndUpdate(ctx, filter, update, options.FindOneAndUpdate().SetUpsert(false))
+	if result.Err() != nil {
+		system.Log.Error(result.Err().Error())
+	}
+	return 1
+}
+
+func (ds *MongoStore) Aggregate(pipeline interface{}, dtype *[]interface{}) {
+	defer ds.dispose()
+	cursor, err := ds.database.Collection(ds.collection).Aggregate(ctx, pipeline)
 	if err != nil {
 		system.Log.Error(err.Error())
 		return

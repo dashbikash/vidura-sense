@@ -8,8 +8,10 @@ import (
 	"net/url"
 	"strings"
 	"sync"
+	"time"
 
 	"github.com/PuerkitoBio/goquery"
+	"github.com/avast/retry-go/v4"
 	robotstxtutil "github.com/dashbikash/vidura-sense/internal/spider/robotstxt-util"
 	"github.com/dashbikash/vidura-sense/internal/system"
 )
@@ -26,7 +28,7 @@ type ISpider interface {
 	RunOneAsyncAwait(targetUrl string)
 	RunOne(targetUrl string)
 	OnSuccess(func(*http.Response))
-	OnError(func(error))
+	OnError(func(string, error))
 	OnHtml(func(*goquery.Document))
 	OnXml(func(*goquery.Document))
 	AddUrlFilter(string, func(string) bool)
@@ -42,7 +44,7 @@ type Spider struct {
 	ctx              context.Context
 	urlFilters       map[string]func(string) bool
 	handlerOnSuccess func(*http.Response)
-	handlerOnError   func(error)
+	handlerOnError   func(string, error)
 	handlerOnHtml    func(*goquery.Document)
 	handlerOnXml     func(*goquery.Document)
 }
@@ -50,7 +52,7 @@ type Spider struct {
 func NewSpider() *Spider {
 
 	c := context.WithValue(context.TODO(), "ProxyIndex", 0)
-	spider := &Spider{httpClient: &http.Client{},
+	spider := &Spider{httpClient: &http.Client{Timeout: time.Second * 5},
 		cfg:        DefaultConfig(),
 		ctx:        c,
 		urlFilters: make(map[string]func(string) bool)}
@@ -63,38 +65,45 @@ func NewSpider() *Spider {
 
 	return spider
 }
-func NewWithConfig(cfg *SpiderConfig) *Spider {
-
-	spider := &Spider{httpClient: &http.Client{},
-		cfg:        cfg,
-		urlFilters: make(map[string]func(string) bool)}
-	return spider
-}
 
 func (spider *Spider) makeRequest(targetUrl string) {
 
 	httpUrl, err := url.Parse(targetUrl)
 	if err != nil {
-		spider.handlerOnError(errors.New("invalid url"))
-		return
+		spider.handlerOnError(targetUrl, errors.New("invalid url"))
 	}
-	httpReq, err := http.NewRequest("GET", httpUrl.String(), nil)
-	if err != nil {
-		system.Log.Error(err.Error())
-		return
-	}
-	httpReq.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
 
-	resp, err := spider.httpClient.Do(httpReq)
+	resp, err := retry.DoWithData(
+		func() (*http.Response, error) {
+			httpReq, err := http.NewRequest("GET", httpUrl.String(), nil)
+			if err != nil {
+				return nil, err
+			}
+			httpReq.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
+
+			resp, err := spider.httpClient.Do(httpReq)
+			if err != nil {
+
+				return nil, err
+			} else if resp.StatusCode != 200 {
+				return resp, errors.New(resp.Status)
+			}
+
+			return resp, nil
+		},
+		retry.Attempts(3),
+		retry.Delay(time.Second*2),
+	)
 
 	if err != nil {
-		system.Log.Error(err.Error())
+		if resp != nil {
+			targetUrl = resp.Request.URL.String()
+		}
+		spider.handlerOnError(targetUrl, err)
 		return
 	}
 	defer func() {
 		resp.Body.Close()
-		resp = nil
-		httpReq = nil
 		httpUrl = nil
 	}()
 
@@ -134,16 +143,16 @@ func (spider *Spider) makeRequest(targetUrl string) {
 
 	} else {
 		if spider.handlerOnError != nil {
-			spider.handlerOnError(errors.New(resp.Status))
+			spider.handlerOnError(targetUrl, err)
+			return
 		}
-
 	}
 
 }
 func (spider *Spider) OnSuccess(fn func(*http.Response)) {
 	spider.handlerOnSuccess = fn
 }
-func (spider *Spider) OnError(fn func(error)) {
+func (spider *Spider) OnError(fn func(string, error)) {
 	spider.handlerOnError = fn
 }
 func (spider *Spider) OnHtml(fn func(*goquery.Document)) {
@@ -156,11 +165,13 @@ func (spider *Spider) OnXml(fn func(*goquery.Document)) {
 func (spider *Spider) AddUrlFilter(filterId string, fn func(targetUrl string) bool) {
 	spider.urlFilters[filterId] = fn
 }
+
 func (spider *Spider) applyUrlFilters(targetUrl string) bool {
 	for filterId, filterFn := range spider.urlFilters {
 
 		if !filterFn(targetUrl) {
-			system.Log.Info("Url filter failed at " + filterId)
+			spider.handlerOnError(targetUrl, errors.New("Url filter failed at "+filterId))
+
 			return false
 		}
 	}

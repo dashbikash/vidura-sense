@@ -5,6 +5,7 @@ import (
 	"net/http"
 	"net/url"
 	"strings"
+	"time"
 
 	"github.com/dashbikash/vidura-sense/internal/datastorage/natsio"
 	"github.com/dashbikash/vidura-sense/internal/system"
@@ -21,7 +22,7 @@ func setRobotsTxtCache(domainName string, robotsTxt string) {
 
 func fetchRobotsTxtFromServer(scheme string, hostUrl string) string {
 
-	client := &http.Client{}
+	client := &http.Client{Timeout: time.Second * 2}
 
 	req, err := http.NewRequest("GET", scheme+"://"+hostUrl+"/robots.txt", nil)
 	if err != nil {
