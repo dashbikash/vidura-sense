@@ -2,6 +2,7 @@ package requester
 
 import (
 	"net/http"
+	"net/url"
 	"strings"
 	"time"
 
@@ -32,11 +33,21 @@ func SimpleRequest(targetUrl []string) {
 		blankPages := make([]interface{}, 0)
 
 		d.Find("a").Each(func(_ int, s *goquery.Selection) {
-			href, ok := s.Attr("href")
-			if ok {
-				if strings.HasPrefix(href, "http") {
-					blankPages = append(blankPages, entity.NewBlankHtmlPage(strings.Trim(href, "/")))
+
+			if href, ok := s.Attr("href"); ok {
+				if hrefParse, err := url.Parse(href); err == nil {
+					if hrefParse.Host == "" {
+						hrefParse.Host = d.Url.Host
+						hrefParse.OmitHost = false
+					}
+					if hrefParse.Scheme == "" {
+						hrefParse.Scheme = d.Url.Scheme
+					}
+					if strings.HasPrefix(hrefParse.Scheme, "http") {
+						blankPages = append(blankPages, entity.NewBlankHtmlPage(strings.Trim(hrefParse.String(), "/")))
+					}
 				}
+
 			}
 
 		})
@@ -61,6 +72,14 @@ func SimpleRequest(targetUrl []string) {
 	})
 	crawler.OnXml(func(d *goquery.Document) {
 		system.Log.Info(d.Find("rss").First().Text())
+	})
+	crawler.AddUrlFilter(targetUrl[0], func(targetUrl string) bool {
+		if ul, err := url.Parse(targetUrl); err == nil {
+			if ul.Host == "quotes.toscrape.com" {
+				return true
+			}
+		}
+		return false
 	})
 
 	crawler.RunManyAsync(targetUrl)

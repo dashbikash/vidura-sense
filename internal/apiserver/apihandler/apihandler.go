@@ -12,7 +12,7 @@ import (
 )
 
 func Index(ctx *gin.Context) {
-	ctx.String(200, "Welcome to Vidura Sense")
+	ctx.HTML(http.StatusOK, "index.html", gin.H{})
 }
 func PostSeedUrl(ctx *gin.Context) {
 	var blankPages []interface{}

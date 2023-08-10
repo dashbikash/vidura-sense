@@ -12,7 +12,10 @@ func init() {
 
 	defer nc.Drain()
 	js, _ := nc.JetStream()
-	if _, err := js.CreateKeyValue(&nats.KeyValueConfig{Bucket: system.Config.Data.NatsIO.KvBuckets.RobotsTxt, TTL: time.Hour * 24 * 7}); err != nil {
+	if _, err := js.CreateKeyValue(&nats.KeyValueConfig{
+		Bucket:  system.Config.Data.NatsIO.KvBuckets.RobotsTxt,
+		TTL:     time.Hour * 24 * 7,
+		Storage: nats.MemoryStorage}); err != nil {
 		system.Log.Debug("Key Value Bucket Already Exist")
 	}
 

@@ -52,7 +52,7 @@ type Spider struct {
 func NewSpider() *Spider {
 
 	c := context.WithValue(context.TODO(), "ProxyIndex", 0)
-	spider := &Spider{httpClient: &http.Client{Timeout: time.Second * 5},
+	spider := &Spider{httpClient: &http.Client{},
 		cfg:        DefaultConfig(),
 		ctx:        c,
 		urlFilters: make(map[string]func(string) bool)}
@@ -104,7 +104,6 @@ func (spider *Spider) makeRequest(targetUrl string) {
 	}
 	defer func() {
 		resp.Body.Close()
-		httpUrl = nil
 	}()
 
 	if resp.StatusCode == 200 {
@@ -120,12 +119,13 @@ func (spider *Spider) makeRequest(targetUrl string) {
 			}()
 			if err != nil {
 				system.Log.Fatal(err.Error())
+			} else {
+				doc.Url = httpUrl
+				if spider.handlerOnHtml != nil {
+					spider.handlerOnHtml(doc)
+					return
+				}
 			}
-			doc.Url = resp.Request.URL
-			if spider.handlerOnHtml != nil {
-				spider.handlerOnHtml(doc)
-			}
-
 		} else if ok := strings.HasPrefix(resp.Header.Get("Content-Type"), "text/xml"); ok {
 			// Load the HTML document
 			doc, err := goquery.NewDocumentFromReader(resp.Body)
@@ -134,9 +134,11 @@ func (spider *Spider) makeRequest(targetUrl string) {
 			}()
 			if err != nil {
 				system.Log.Fatal(err.Error())
-			}
-			if spider.handlerOnXml != nil {
-				spider.handlerOnXml(doc)
+			} else {
+				if spider.handlerOnXml != nil {
+					spider.handlerOnXml(doc)
+					return
+				}
 			}
 
 		}
