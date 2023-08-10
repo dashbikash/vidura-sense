@@ -5,10 +5,17 @@ import (
 )
 
 func setRoutes() {
+	router.LoadHTMLGlob("internal/apiserver/templates/*")
 
 	router.GET("/", apihandler.Index)
+
 	router.POST("/seedurl", apihandler.PostSeedUrl)
-	router.POST("/crawl", apihandler.PostCrawl)
-	router.POST("/crawlurl", apihandler.PostCrawlUrl)
+
+	crawl := router.Group("/crawl")
+	{
+		crawl.POST("/new", apihandler.PostCrawl)
+		crawl.POST("/url", apihandler.PostCrawlUrl)
+		crawl.POST("/exclusive", apihandler.PostCrawlUrl)
+	}
 
 }

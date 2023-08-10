@@ -12,7 +12,7 @@ import (
 )
 
 func Index(ctx *gin.Context) {
-	ctx.String(200, "Welcome to Vidura Sense")
+	ctx.HTML(http.StatusOK, "index.html", gin.H{})
 }
 func PostSeedUrl(ctx *gin.Context) {
 	var blankPages []interface{}
@@ -22,7 +22,7 @@ func PostSeedUrl(ctx *gin.Context) {
 	// See more at https://github.com/gin-gonic/gin/blob/master/binding/binding.go#L48
 	if ctx.ShouldBind(&urls) == nil {
 		for _, targetUrl := range urls {
-			blankPages = append(blankPages, entity.BlankHtmlPage(targetUrl))
+			blankPages = append(blankPages, entity.NewBlankHtmlPage(targetUrl))
 		}
 		entity.HtmlPageCreateBlankEntries(&blankPages)
 	}

@@ -4,13 +4,13 @@ go 1.20
 
 require (
 	github.com/PuerkitoBio/goquery v1.8.1
+	github.com/avast/retry-go/v4 v4.5.0
 	github.com/cespare/xxhash v1.1.0
 	github.com/common-nighthawk/go-figure v0.0.0-20210622060536-734e95fb86be
 	github.com/gin-gonic/gin v1.9.1
 	github.com/go-co-op/gocron v1.30.1
 	github.com/microcosm-cc/bluemonday v1.0.25
 	github.com/nats-io/nats.go v1.28.0
-	github.com/redis/go-redis/v9 v9.0.5
 	github.com/temoto/robotstxt v1.1.2
 	go.mongodb.org/mongo-driver v1.12.0
 	go.uber.org/zap v1.24.0
@@ -21,9 +21,7 @@ require (
 	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/aymerick/douceur v0.2.0 // indirect
 	github.com/bytedance/sonic v1.9.1 // indirect
-	github.com/cespare/xxhash/v2 v2.2.0 // indirect
 	github.com/chenzhuoyu/base64x v0.0.0-20221115062448-fe3a3abad311 // indirect
-	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/gabriel-vasile/mimetype v1.4.2 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
 	github.com/go-playground/locales v0.14.1 // indirect

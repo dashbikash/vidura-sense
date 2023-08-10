@@ -11,7 +11,7 @@ server:
   host: localhost
   port: 8600 
 crawler: 
-  user-agent: EthicalBot(RnD Purpose)/bikashprakashdash@gmail.com
+  user-agent: ViduraEthicalBot(bikashprakashdash@gmail.com;Research Purpose)
   proxies: 
     - http://test:test@localhost:3128
 data:

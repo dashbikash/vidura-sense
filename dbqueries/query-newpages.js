@@ -1,7 +1,7 @@
 db.getCollection('htmlpages').aggregate([
     {$match: {
-      "body":null
-    } },
+      "body":null }
+      },
     {
         $sort: {
           "updated_on": 1
@@ -9,7 +9,7 @@ db.getCollection('htmlpages').aggregate([
     },
     {$project: {
         "_id":0,
-      "url":1
+        "url":1
     }},
     {$skip: 0*20},
     {

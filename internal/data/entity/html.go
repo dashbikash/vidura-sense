@@ -10,6 +10,7 @@ import (
 	mongostore "github.com/dashbikash/vidura-sense/internal/datastorage/mongo-store"
 	"github.com/dashbikash/vidura-sense/internal/system"
 	"go.mongodb.org/mongo-driver/bson"
+	"go.mongodb.org/mongo-driver/bson/primitive"
 	"go.mongodb.org/mongo-driver/mongo"
 )
 
@@ -28,31 +29,30 @@ type HtmlPage struct {
 		Language    string `json:"language"`
 		Viewport    string `json:"viewport"`
 	} `json:"meta"`
-	Body      string    `json:"body"`
-	Links     []string  `json:"links"`
-	UpdatedOn time.Time `json:"updated_on" bson:"updated_on"`
+	Body      string             `json:"body"`
+	Links     []string           `json:"links"`
+	UpdatedOn primitive.DateTime `json:"updated_on" bson:"updated_on"`
 	UpdatedBy struct {
 		AppID  string `json:"app_id"`
 		Proxy  string `json:"proxy"`
 		NodeIP string `json:"node_ip" bson:"node_ip"`
 	} `json:"updated_by" bson:"updated_by"`
+	LockExpiry primitive.DateTime `json:"lock_expiry,omitempty" bson:"lock_expiry,omitempty"`
 }
 
-func (htmlPage *HtmlPage) StoreUpdated() {
+func (htmlPage *HtmlPage) Store() {
 	htmlPage.ID = strconv.FormatUint(xxhash.Sum64String(htmlPage.URL), 10)
 	htmlPage.Hash = strconv.FormatUint(xxhash.Sum64String(htmlPage.URL+"\n"+htmlPage.Body), 10)
 
 	if ds := mongostore.DefaultClient(); ds != nil {
-		result := ds.CreateOrReplaceOne(system.Config.Data.Mongo.Collections.Htmlpages, htmlPage, bson.D{{Key: "_id", Value: htmlPage.ID}})
+		result := ds.Collection(system.Config.Data.Mongo.Collections.Htmlpages).CreateOrReplaceOne(htmlPage, bson.D{{Key: "_id", Value: htmlPage.ID}})
 		system.Log.Info(fmt.Sprintf("%d document updated.", result))
 	}
 }
-func HtmlPageCreateBlankEntries(pages *[]interface{}) {
+func HtmlPageLockUpdate(targetUrl string) {
 
 	if ds := mongostore.DefaultClient(); ds != nil {
-
-		result := ds.InsertOrIgnore(system.Config.Data.Mongo.Collections.Htmlpages, *pages)
-		system.Log.Info(fmt.Sprintf("%d blank document created.", result))
+		ds.Collection(system.Config.Data.Mongo.Collections.Htmlpages).FindOneAndUpdate(bson.M{"$set": bson.M{"lock_expiry": time.Now().Add(24 * time.Hour)}}, bson.D{{Key: "url", Value: targetUrl}})
 	}
 }
 
@@ -83,23 +83,47 @@ func GetUrlMeta(host string, urlMeta *UrlMeta) {
 	}
 }
 
-func BlankHtmlPage(targetUrl string) interface{} {
+func NewBlankHtmlPage(targetUrl string) interface{} {
 
 	return struct {
 		ID        string `json:"_id" bson:"_id"`
 		URL       string
-		UpdatedOn time.Time `json:"updated_on"`
+		UpdatedOn primitive.DateTime `json:"updated_on" bson:"updated_on"`
 		UpdatedBy struct {
 			AppID string `json:"app_id" bson:"app_id"`
 		} `json:"updated_by" bson:"updated_by"`
 	}{
 		ID:        strconv.FormatUint(xxhash.Sum64String(targetUrl), 10),
 		URL:       targetUrl,
-		UpdatedOn: time.Date(1900, 1, 1, 0, 0, 0, 0, time.UTC),
+		UpdatedOn: primitive.DateTime(time.Now().Local().UnixMilli()),
 		UpdatedBy: struct {
 			AppID string `json:"app_id" bson:"app_id"`
 		}{
 			AppID: system.Config.Application.ID,
 		},
+	}
+}
+
+func NewBlankHtmlPageV2(targetUrl string) interface{} {
+
+	return HtmlPage{
+		ID:        strconv.FormatUint(xxhash.Sum64String(targetUrl), 10),
+		URL:       targetUrl,
+		UpdatedOn: primitive.DateTime(time.Date(1986, 7, 2, 0, 0, 0, 0, time.UTC).Unix()),
+
+		UpdatedBy: struct {
+			AppID  string `json:"app_id"`
+			Proxy  string `json:"proxy"`
+			NodeIP string `json:"node_ip" bson:"node_ip"`
+		}{},
+	}
+}
+
+func HtmlPageCreateBlankEntries(pages *[]interface{}) {
+
+	if ds := mongostore.DefaultClient(); ds != nil {
+
+		result := ds.Collection(system.Config.Data.Mongo.Collections.Htmlpages).InsertOrIgnore(*pages)
+		system.Log.Info(fmt.Sprintf("%d blank document created.", result))
 	}
 }
