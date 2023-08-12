@@ -14,7 +14,7 @@ import (
 func Index(ctx *gin.Context) {
 	ctx.HTML(http.StatusOK, "index.html", gin.H{})
 }
-func PostSeedUrl(ctx *gin.Context) {
+func PostUrlAdd(ctx *gin.Context) {
 	var blankPages []interface{}
 	var urls []string
 	// If `GET`, only `Form` binding engine (`query`) used.
@@ -29,7 +29,7 @@ func PostSeedUrl(ctx *gin.Context) {
 
 	ctx.String(200, fmt.Sprintf("%d urls seeded.", len(blankPages)))
 }
-func PostCrawl(ctx *gin.Context) {
+func PostCrawlNew(ctx *gin.Context) {
 
 	limit, err := strconv.ParseInt(ctx.DefaultQuery("lim", "30"), 0, 0)
 	if err != nil {
@@ -51,6 +51,24 @@ func PostCrawlUrl(ctx *gin.Context) {
 		return
 	}
 
+	requester.SimpleRequest(urls)
+	ctx.String(200, "Done")
+}
+func PostCrawlExclusive(ctx *gin.Context) {
+
+	limit, err := strconv.ParseInt(ctx.DefaultQuery("lim", "30"), 0, 0)
+	if err != nil {
+		ctx.String(http.StatusInternalServerError, err.Error())
+		return
+	}
+
+	var domains []string
+
+	if err := ctx.ShouldBind(&domains); err != nil {
+		ctx.String(http.StatusInternalServerError, err.Error())
+		return
+	}
+	urls := urlfrontier.GetExclusiveDomainNewUrls(int(limit), domains)
 	requester.SimpleRequest(urls)
 	ctx.String(200, "Done")
 }

@@ -1,14 +1,22 @@
-POST http://localhost:8600/crawlurl HTTP/1.1
+### Seed Urls
+POST http://localhost:8600/url HTTP/1.1
 Content-Type: application/json
 
-["https://quotes.toscrape.com/author/Albert-Einstein"]
+["https://books.toscrape.com/"]
+
+
+### Crawl Perticular Urls
+POST http://localhost:8600/crawl/url HTTP/1.1
+Content-Type: application/json
+
+["https://www.w3schools.com"]
 
 ###
-POST http://localhost:8600/crawl?lim=50 HTTP/1.1
+POST http://localhost:8600/crawl/new?lim=100 HTTP/1.1
 Content-Type: application/json
 
 ###
-POST http://localhost:8600/seedurl HTTP/1.1
+POST http://localhost:8600/crawl/exclusive?lim=100 HTTP/1.1
 Content-Type: application/json
 
-["https://quotes.toscrape.com"]
+["books.toscrape.com"]

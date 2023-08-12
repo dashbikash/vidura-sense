@@ -9,13 +9,16 @@ func setRoutes() {
 
 	router.GET("/", apihandler.Index)
 
-	router.POST("/seedurl", apihandler.PostSeedUrl)
-
-	crawl := router.Group("/crawl")
+	urlRoute := router.Group("/url")
 	{
-		crawl.POST("/new", apihandler.PostCrawl)
-		crawl.POST("/url", apihandler.PostCrawlUrl)
-		crawl.POST("/exclusive", apihandler.PostCrawlUrl)
+		urlRoute.POST("/", apihandler.PostUrlAdd)
+	}
+
+	crawlRoutes := router.Group("/crawl")
+	{
+		crawlRoutes.POST("/new", apihandler.PostCrawlNew)
+		crawlRoutes.POST("/url", apihandler.PostCrawlUrl)
+		crawlRoutes.POST("/exclusive", apihandler.PostCrawlExclusive)
 	}
 
 }

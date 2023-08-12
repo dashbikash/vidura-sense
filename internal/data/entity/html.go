@@ -3,7 +3,9 @@ package entity
 import (
 	"context"
 	"fmt"
+	"net/url"
 	"strconv"
+	"strings"
 	"time"
 
 	"github.com/cespare/xxhash"
@@ -18,7 +20,7 @@ type HtmlPage struct {
 	ID     string `json:"_id" bson:"_id"`
 	URL    string `json:"url"`
 	Hash   string `json:"hash"`
-	Scheme string `json:"scheme" `
+	Scheme string `json:"scheme"`
 	Host   string `json:"host"`
 	Title  string `json:"title" `
 
@@ -26,6 +28,7 @@ type HtmlPage struct {
 		Charset     string `json:"charset"`
 		Author      string `json:"author"`
 		Description string `json:"description"`
+		Keywords    string `json:"keywords"`
 		Language    string `json:"language"`
 		Viewport    string `json:"viewport"`
 	} `json:"meta"`
@@ -84,17 +87,24 @@ func GetUrlMeta(host string, urlMeta *UrlMeta) {
 }
 
 func NewBlankHtmlPage(targetUrl string) interface{} {
+	urlParsed, _ := url.Parse(targetUrl)
+	httpScheme := urlParsed.Scheme
+	urlParsed.Scheme = ""
 
 	return struct {
 		ID        string `json:"_id" bson:"_id"`
 		URL       string
+		Scheme    string
+		Host      string
 		UpdatedOn primitive.DateTime `json:"updated_on" bson:"updated_on"`
 		UpdatedBy struct {
 			AppID string `json:"app_id" bson:"app_id"`
 		} `json:"updated_by" bson:"updated_by"`
 	}{
-		ID:        strconv.FormatUint(xxhash.Sum64String(targetUrl), 10),
-		URL:       targetUrl,
+		ID:        strconv.FormatUint(xxhash.Sum64String(strings.Trim(urlParsed.String(), "/")), 10),
+		URL:       strings.Trim(urlParsed.String(), "/"),
+		Scheme:    httpScheme,
+		Host:      urlParsed.Host,
 		UpdatedOn: primitive.DateTime(time.Now().Local().UnixMilli()),
 		UpdatedBy: struct {
 			AppID string `json:"app_id" bson:"app_id"`

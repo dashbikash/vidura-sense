@@ -2,7 +2,6 @@ package urlfrontier
 
 import (
 	"context"
-	"fmt"
 	"time"
 
 	mongostore "github.com/dashbikash/vidura-sense/internal/datastorage/mongo-store"
@@ -21,11 +20,14 @@ func GetNewUrls(limit int) []string {
 			}},
 		}}}},
 		{{Key: "$sort", Value: bson.M{"updated_on": 1}}},
-		{{Key: "$project", Value: bson.M{"_id": 0, "url": 1}}},
+		{{Key: "$project", Value: bson.M{"_id": 0, "url": 1, "scheme": 1}}},
 		{{Key: "$limit", Value: limit}},
 	}
 
-	var result []struct{ URL string }
+	var result []struct {
+		URL    string
+		Scheme string
+	}
 
 	cursor, err := mongostore.DefaultClient().Database().Collection(system.Config.Data.Mongo.Collections.Htmlpages).Aggregate(context.TODO(),
 		pipeline)
@@ -40,29 +42,32 @@ func GetNewUrls(limit int) []string {
 	}
 	urls := make([]string, 0)
 	for _, v := range result {
-		urls = append(urls, v.URL)
+		urls = append(urls, v.Scheme+"://"+v.URL)
 	}
-	fmt.Println(urls)
 	return urls
 
 }
 
 func GetExclusiveDomainNewUrls(limit int, filterDomains []string) []string {
+
 	pipeline := mongo.Pipeline{
 		{{Key: "$match", Value: bson.M{"$and": bson.A{
 			bson.M{"hash": nil},
-			bson.M{"$in": filterDomains},
+			bson.M{"host": bson.M{"$in": filterDomains}},
 			bson.M{"$or": bson.A{
 				bson.M{"lock_expiry": nil},
 				bson.M{"lock_expiry": bson.M{"$lt": time.Now()}},
 			}},
 		}}}},
 		{{Key: "$sort", Value: bson.M{"updated_on": 1}}},
-		{{Key: "$project", Value: bson.M{"_id": 0, "url": 1}}},
+		{{Key: "$project", Value: bson.M{"_id": 0, "url": 1, "scheme": 1}}},
 		{{Key: "$limit", Value: limit}},
 	}
 
-	var result []struct{ URL string }
+	var result []struct {
+		URL    string
+		Scheme string
+	}
 
 	cursor, err := mongostore.DefaultClient().Database().Collection(system.Config.Data.Mongo.Collections.Htmlpages).Aggregate(context.TODO(),
 		pipeline)
@@ -77,9 +82,8 @@ func GetExclusiveDomainNewUrls(limit int, filterDomains []string) []string {
 	}
 	urls := make([]string, 0)
 	for _, v := range result {
-		urls = append(urls, v.URL)
+		urls = append(urls, v.Scheme+"://"+v.URL)
 	}
-	fmt.Println(urls)
 	return urls
 
 }
