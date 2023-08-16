@@ -52,14 +52,14 @@ type Spider struct {
 func NewSpider() *Spider {
 
 	c := context.WithValue(context.TODO(), "ProxyIndex", 0)
-	spider := &Spider{httpClient: &http.Client{},
+	spider := &Spider{httpClient: &http.Client{Transport: &http.Transport{}},
 		cfg:        DefaultConfig(),
 		ctx:        c,
 		urlFilters: make(map[string]func(string) bool)}
 
 	if !spider.cfg.IgnoreRobotTxt {
 		spider.AddUrlFilter("RobotTxtValidation", func(targetUrl string) bool {
-			return robotstxtutil.IsAllowedUrl(targetUrl)
+			return robotstxtutil.RobotsTxtFor(targetUrl, spider.RoundRobinProxy()).IsAllowed()
 		})
 	}
 
@@ -72,6 +72,7 @@ func (spider *Spider) makeRequest(targetUrl string) {
 	if err != nil {
 		spider.handlerOnError(targetUrl, errors.New("invalid url"))
 	}
+	spider.httpClient.Transport = &http.Transport{Proxy: http.ProxyURL(spider.RoundRobinProxy())}
 
 	resp, err := retry.DoWithData(
 		func() (*http.Response, error) {
@@ -79,6 +80,7 @@ func (spider *Spider) makeRequest(targetUrl string) {
 			if err != nil {
 				return nil, err
 			}
+
 			httpReq.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
 
 			resp, err := spider.httpClient.Do(httpReq)

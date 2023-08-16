@@ -4,7 +4,6 @@ import (
 	"io"
 	"net/http"
 	"net/url"
-	"strings"
 	"time"
 
 	"github.com/dashbikash/vidura-sense/internal/datastorage/natsio"
@@ -12,22 +11,29 @@ import (
 	"github.com/temoto/robotstxt"
 )
 
-func getRobotsTxtCache(domainName string) string {
+type RobotsTxt struct {
+	proxy     *url.URL
+	value     string
+	targetUrl string
+}
+
+func (rt *RobotsTxt) getRobotsTxtCache(domainName string) string {
 
 	return natsio.KVGet(system.Config.Data.NatsIO.KvBuckets.RobotsTxt, domainName)
 }
-func setRobotsTxtCache(domainName string, robotsTxt string) {
+func (rt *RobotsTxt) setRobotsTxtCache(domainName string, robotsTxt string) {
 	natsio.KVPut(system.Config.Data.NatsIO.KvBuckets.RobotsTxt, domainName, robotsTxt)
 }
 
-func fetchRobotsTxtFromServer(scheme string, hostUrl string) string {
+func (rt *RobotsTxt) fetchRobotsTxtFromServer(scheme string, hostUrl string) string {
 
-	client := &http.Client{Timeout: time.Second * 2}
+	client := &http.Client{Timeout: time.Second * 5}
 
 	req, err := http.NewRequest("GET", scheme+"://"+hostUrl+"/robots.txt", nil)
 	if err != nil {
 		system.Log.Fatal(err.Error())
 	}
+	client.Transport = &http.Transport{Proxy: http.ProxyURL(rt.proxy)}
 	req.Header.Set("User-Agent", system.Config.Crawler.UserAgent)
 
 	resp, err := client.Do(req)
@@ -48,7 +54,6 @@ func fetchRobotsTxtFromServer(scheme string, hostUrl string) string {
 	}()
 	if resp.StatusCode == http.StatusOK {
 		robotsVal := string(body)
-
 		return robotsVal
 	} else if resp.StatusCode == http.StatusNotFound {
 		return "na"
@@ -57,37 +62,35 @@ func fetchRobotsTxtFromServer(scheme string, hostUrl string) string {
 
 }
 
-func GetRobotsTxtForUrl(targetUrl string) string {
-	robotsTxt := ""
+func RobotsTxtFor(targetUrl string, proxy *url.URL) *RobotsTxt {
+	rt := &RobotsTxt{targetUrl: targetUrl, proxy: proxy}
 	urlParsed, err := url.Parse(targetUrl)
-	system.Log.Debug("Getting Robotstxt: " + urlParsed.Host)
+	system.Log.Debug("Getting robots.txt: for" + urlParsed.Host)
 	if err != nil {
 		system.Log.Error(err.Error())
 	} else {
-		urlParsed.Host = strings.TrimPrefix(urlParsed.Host, "www.")
-		robotsTxt = getRobotsTxtCache(urlParsed.Host)
-		if len(robotsTxt) < 1 {
-			robotsTxt = fetchRobotsTxtFromServer(urlParsed.Scheme, urlParsed.Host)
-			setRobotsTxtCache(urlParsed.Host, robotsTxt)
+		rt.value = rt.getRobotsTxtCache(urlParsed.Host)
+		if len(rt.value) < 1 {
+			rt.value = rt.fetchRobotsTxtFromServer(urlParsed.Scheme, urlParsed.Host)
+			rt.setRobotsTxtCache(urlParsed.Host, rt.value)
 		}
 	}
 
-	return robotsTxt
+	return rt
 
 }
 
-func IsAllowedUrl(targetUrl string) bool {
-	robotsTxtRules := GetRobotsTxtForUrl(targetUrl)
-	if robotsTxtRules == "na" {
+func (rt *RobotsTxt) IsAllowed() bool {
+
+	if rt.value == "na" {
 		return true
 	}
-	robots, err := robotstxt.FromString(robotsTxtRules)
+	robots, err := robotstxt.FromString(rt.value)
 	if err != nil {
 		system.Log.Error(err.Error())
 	}
 
-	urlParsed, err := url.Parse(targetUrl)
-	system.Log.Debug("Getting Robotstxt for:" + urlParsed.Host)
+	urlParsed, err := url.Parse(rt.targetUrl)
 	if err != nil {
 		system.Log.Error(err.Error())
 	}
