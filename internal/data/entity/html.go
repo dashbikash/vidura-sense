@@ -32,8 +32,14 @@ type HtmlPage struct {
 		Language    string `json:"language"`
 		Viewport    string `json:"viewport"`
 	} `json:"meta"`
-	Body      string             `json:"body"`
-	Links     []string           `json:"links"`
+	Body    string `json:"body"`
+	Summary struct {
+		Content string
+		Nav     []struct {
+			Href string
+			Text string
+		}
+	} `json:"summary"`
 	UpdatedOn primitive.DateTime `json:"updated_on" bson:"updated_on"`
 	UpdatedBy struct {
 		AppID  string `json:"app_id"`

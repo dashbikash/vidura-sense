@@ -38,7 +38,7 @@ func PostCrawlNew(ctx *gin.Context) {
 	}
 
 	urls := urlfrontier.GetNewUrls(int(limit))
-	requester.SimpleRequest(urls)
+	requester.BroadRequest(urls)
 	ctx.String(200, "Done")
 }
 
@@ -51,7 +51,7 @@ func PostCrawlUrl(ctx *gin.Context) {
 		return
 	}
 
-	requester.SimpleRequest(urls)
+	requester.BroadRequest(urls)
 	ctx.String(200, "Done")
 }
 func PostCrawlExclusive(ctx *gin.Context) {
@@ -69,6 +69,6 @@ func PostCrawlExclusive(ctx *gin.Context) {
 		return
 	}
 	urls := urlfrontier.GetExclusiveDomainNewUrls(int(limit), domains)
-	requester.SimpleRequest(urls)
+	requester.ExclusiveDomainRequest(urls, domains)
 	ctx.String(200, "Done")
 }
